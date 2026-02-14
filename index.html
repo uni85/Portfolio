@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Y's Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-  <header class="site-header">
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header glass">
     <div class="container">
       <h1 class="logo">Younes's Portfolio</h1>
       <nav class="site-nav">
-        <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#certificates">Certificates</a>
@@ -22,256 +24,140 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero reveal">
     <div class="container">
-      <h2 class="hero-title">Data Engineering & Cloud Solutions Portfolio</h2>
-      <p class="hero-subtitle">Building intelligent systems through cloud, AI, and automation.</p>
-      <a class="btn btn-primary" href="https://sites.google.com/view/portfolio-cv-badges-courses/home">View Google Portfolio</a>
+      <h2 class="hero-title">Data Engineering & Cloud Solutions</h2>
+      <p class="hero-subtitle">Crafting intelligent systems with cloud, AI, and automation.</p>
+      <a class="btn btn-primary" href="https://sites.google.com/view/portfolio-cv-badges-courses/home"
+        target="_blank" rel="noopener noreferrer">
+        View Google Portfolio
+      </a>
     </div>
   </section>
 
-  <section id="about" class="about">
+  <section id="about" class="section glass reveal">
     <div class="container">
-      <h3>About Me</h3>
+      <h3 class="section-title">About Me</h3>
+      <p class="emoji-row" aria-hidden="true">🖥️🔧🌱🏊‍🧗‍</p>
       <p>
-          Passionate about leveraging technology to automate business workflows and optimize decision-making. Skilled in Python, cloud platforms (Azure, AWS, GCP), and advanced Excel/VBA for automation and data analysis. Experienced in using Power Automate to streamline repetitive tasks and integrate services across Microsoft 365 and third-party platforms, enhancing operational efficiency. Proficient with Power Apps to rapidly build low-code applications that digitize manual processes and improve user interaction. Familiar with Databricks for scalable data engineering and collaborative analytics using Apache Spark, enabling faster insights from large datasets. Comfortable scripting with PowerShell to automate system administration, manage cloud resources, and orchestrate infrastructure tasks with precision.
+        I channel my passion for technology into designing systems that move with clarity and purpose, much like the tranquil world of aquariophilia that grounds me, the weightless serenity of swimming that restores me, and the gravity‑defying dance of bouldering that teaches me resilience.
       </p>
     </div>
   </section>
 
-  <section id="education" class="education">
+  <section id="education" class="section reveal">
     <div class="container">
-      <h3>Education</h3>
+      <h3 class="section-title">Education</h3>
 
-      <div class="edu-item">
+      <div class="card">
         <h4>DSTI – Data ScienceTech Institute, Paris</h4>
-        <p><strong>Master:</strong> Data Engineering for AI (Cloud, Python, Machine Learning, Deep Learning, R, SQL, ETL, Data Warehousing)</p>
+        <p><strong>Master:</strong> Data Engineering for AI</p>
+        <p>Cloud computing, Python machine learning, neural networks, deep learning, CRM management, R, SQL, ETL, data warehousing.</p>
         <span class="date">Sep 2024 – Jul 2026</span>
       </div>
-      
-      <div class="edu-item">
-        <h4>SANS Institute – Cybersecurity Labs</h4>
-        <p><strong>SkillQuest: </strong>Network & security (SAN configuration, SkillQuest labs, NetWars , ELK stack, Kibana, Elasticsearch, system monitoring)</p>
-        <span class="date">Oct 2025 - May 2026</span>
+
+      <div class="card">
+        <h4>SANS Institute – Cybersecurity Labs (SkillQuest)</h4>
+        <p><strong>Program:</strong> Cybersecurity Hands‑On Labs</p>
+        <p>Network & security (SAN configuration, SkillQuest labs, NetWars, ELK stack, Kibana, Elasticsearch, system monitoring).</p>
+        <span class="date">Oct 2025 – May 2026</span>
       </div>
-      
-      <div class="edu-item">
-        <h4>National Conservatory of Arts et Métiers (CNAM), Paris</h4>
-        <p><strong>Bachelor:</strong> IT (UML Modeling, PHP, Java, C, XML, Project Management, Statistical Analysis)</p>
+
+      <div class="card">
+        <h4>Cisco Ethical Hacking Course</h4>
+        <p><strong>Certification:</strong> Ethical Hacking & Cyber Defense</p>
+        <p>Kali Linux, Wireshark, Nmap, Metasploit, Burp Suite, Hydra, John the Ripper, Linux terminal tools, packet sniffers, port scanners, vulnerability scanners, web‑security testing frameworks</p>
+        <span class="date">Dec 2025 – Jun 2026</span>
+      </div>
+
+      <div class="card">
+        <h4>CNAM Paris & Île-de-France</h4>
+        <p><strong>Bachelor:</strong> Information Technology</p>  
+        <p>UML modeling, PHP, Java, C, XML programming, statistical analysis, project management.</p>
         <span class="date">Sep 2021 – Jun 2024</span>
       </div>
 
-      <div class="edu-item">
+      <div class="card">
         <h4>Tehran Institute of Technology</h4>
-        <p><strong>Certificates:</strong> Web Design (PHP, HTML5, CSS3, Bootstrap) | Network+ CompTIA</p>
+        <p><strong>Certificates:</strong></p>
+		<p>Web Design (HTML5, CSS3, PHP, Bootstrap)</p>
+		<p> Network+ (CompTIA)</p>
         <span class="date">Jan 2020 – Jul 2021</span>
       </div>
     </div>
   </section>
 
-  <section id="experience" class="experience">
+  <section id="experience" class="section glass reveal">
     <div class="container">
-      <h3>Professional Experiences</h3>
+      <h3 class="section-title">Professional Experiences</h3>
 
-      <div class="exp-item">
-        <h4>AXA Insurance – General Secretary, Compliance Dept. (Nanterre, 92)</h4>
-        <p>Developing applications for automation in invoicing, contracts, HR planning, and database management using VBA, Power BI, Power Automate, Power Apps, and Databricks.</p>
-        <span class="date">Sep 2024 – Oct 2026</span>
+      <div class="card">
+        <h4>AXA Insurance – Compliance Department (Nanterre, 92)</h4>
+        <p>Modernizing legacy systems through Microsoft solutions:  
+          SharePoint automation, Databricks notebooks, Power Apps forms, Power Automate workflows, and Power BI dashboards.  
+          Improved collaboration and operational efficiency across cloud services.</p>
+        <span class="date">Sep 2024 – Jul 2026</span>
       </div>
 
-      <div class="exp-item">
-        <h4>AXA Insurance – General Secretary, Risk Control Dept. (Nanterre, 92)</h4>
-        <p>Created VBA apps and Power BI dashboards for automation, SQL analysis in SAS programs, and Agile/SharePoint integration.</p>
-        <span class="date">Feb 2022 – Jul 2024</span>
+      <div class="card">
+        <h4>AXA Insurance – Risk Control Department (Nanterre, 92)</h4>
+        <p>Developed VBA applications for automated dashboards, dynamic reporting, invoice workflows, and risk calculations.  
+          Performed SQL analysis in SAS, contributed to Agile cycles, and supported SharePoint administration.</p>
+        <span class="date">Feb 2024 – Aug 2024</span>
       </div>
 
-      <div class="exp-item">
-        <h4>Hellmann Worldwide Logistics, France (Villepinte, 95)</h4>
-        <p>Supported automation workflows and data reporting for logistics and administration.</p>
-        <span class="date">Sep 2023 – Dec 2023</span>
+      <div class="card">
+        <h4>Hellmann Worldwide Logistics (Villepinte, 95)</h4>
+        <p>Created automation tools for invoicing, client onboarding, database updates, employee salary calculation,  
+          and planning systems using Visual Basic for Applications (VBA) and Excel automation.</p>
+        <span class="date">Sep 2023 – Jan 2024</span>
       </div>
 
-      <div class="exp-item">
-        <h4>Doggies et compagnie, Bois-Colombes (Hauts-de-Seine, 92)</h4>
-        <p>Assisted in digital transformation projects and automation of business tasks.</p>
+      <div class="card">
+        <h4>Doggies et Compagnie (Bois-Colombes, 92)</h4>
+        <p>Developing applications for: automate creating, modifying and cancelling invoices - automate subscription of new clients and filling the contract’s data base - auto calculate the salary and missions for each employee - auto fill the planning files by programming and using interactive forms in Visual Basic for applications. Managed administrative workflows and contributed to improving service logistics and planning efficiency.</p>
+        <span class="date">Feb 2022 – Feb 2024</span>
       </div>
     </div>
   </section>
 
-<section id="certificates" class="certificates">
-  <div class="container">
-    <h3>Certificates & Skill Badges</h3>
-    <ul>
-      <li>Microsoft Azure Fundamentals</li>
-      <li>AWS Cloud Practitioner – Associate</li>
-      <li>Google Cloud Engineer</li>
-      <li>Digital Transformation with Google Cloud</li>
-      <li>Google Sheets: Functions, Formulas, and Charts</li>
-      <li>LinkedIn Learning: Full Stack Web Developer, SAS 9.4, Power BI, R for Data Science, Docker, UX Design, XML & .NET</li>
-      <li>English: IELTS (6.5) | Life Guard License</li>
-    </ul>
-  </div>
-  
-  <div class="badge-gallery">
-    <!-- AWS -->
-    <img src="images/AWS cloud prac.png" alt="AWS Cloud Practitioner" onclick="openModal(this)">
-    <img src="images/AWS cloud.png" alt="AWS Cloud" onclick="openModal(this)">
-    <img src="images/AWS arch.png" alt="AWS Architecture" onclick="openModal(this)">
-    <img src="images/AWS eks.png" alt="AWS EKS" onclick="openModal(this)">
-    <img src="images/AWS ML.png" alt="AWS Machine Learning" onclick="openModal(this)">
-    <img src="images/aw clo.png" alt="AWS Cloud Overview" onclick="openModal(this)">
-    
-    <!-- Cisco -->
-    <img src="images/Cisco PT.png" alt="Cisco Packet Tracer" onclick="openModal(this)">
-    <img src="images/Cisco sec.png" alt="Cisco Security" onclick="openModal(this)">
-    
-    <!-- Fortinet -->
-    <img src="images/FortiCy.png" alt="Fortinet Cybersecurity" onclick="openModal(this)">
-    <img src="images/forti1.png" alt="Fortinet Badge" onclick="openModal(this)">
-    <img src="images/fortiland.png" alt="Fortinet Fundamentals" onclick="openModal(this)">
-    <img src="images/nse.png" alt="Fortinet NSE" onclick="openModal(this)">
-    <img src="images/nse 1.png" alt="Fortinet NSE 1" onclick="openModal(this)">
-    <img src="images/nse 2.png" alt="Fortinet NSE 2" onclick="openModal(this)">
+  <section id="certificates" class="section reveal">
+    <div class="container">
+      <h3 class="section-title">Certificates & Skill Badges</h3>
 
-    <!-- Neo -->
-    <img src="images/NeoFJ.png" alt="Neo4j certified" onclick="openModal(this)">
-    
-    <!-- Google Cloud & AI -->
-    <img src="images/G GCP.png" alt="Google Cloud Platform" onclick="openModal(this)">
-    <img src="images/G Big query.png" alt="Google BigQuery" onclick="openModal(this)">
-    <img src="images/G GenAI.png" alt="Google Generative AI" onclick="openModal(this)">
-    <img src="images/G LLM.png" alt="Google Large Language Models" onclick="openModal(this)">
-    <img src="images/G sheets.png" alt="Google Sheets" onclick="openModal(this)">
-    <img src="images/G Vertex Flutter.png" alt="Vertex AI Flutter" onclick="openModal(this)">
-    <img src="images/G Vertex streamlit.png" alt="Vertex AI Streamlit" onclick="openModal(this)">
-    
-    <!-- Databricks / Data -->
-    <img src="images/db gcp.png" alt="Databricks GCP" onclick="openModal(this)">
-    <img src="images/db de-Photoroom.png" alt="Databricks Data Engineering" onclick="openModal(this)">
-    <img src="images/db ml-Photoroom.png" alt="Databricks Machine Learning" onclick="openModal(this)">
-    <img src="images/db spark.png" alt="Apache Spark" onclick="openModal(this)">
-    
-    <!-- IBM -->
-    <img src="images/IBM ux.png" alt="IBM UX Design" onclick="openModal(this)">
-    <img src="images/bm ai.png" alt="IBM AI" onclick="openModal(this)">
-    <img src="images/bm cy.png" alt="IBM Cybersecurity" onclick="openModal(this)">
-    <img src="images/bm ux.png" alt="IBM UX" onclick="openModal(this)">
-    
-    <!-- Linux Foundation -->
-    <img src="images/LFC 108.png" alt="Linux Foundation LFC108" onclick="openModal(this)">
-    <img src="images/LFD104.png" alt="Linux Foundation LFD104" onclick="openModal(this)">
-    <img src="images/LFEL1001.png" alt="LFEL1001" onclick="openModal(this)">
-    <img src="images/LFEL1005.png" alt="LFEL1005" onclick="openModal(this)">
-    <img src="images/LFEL1006.png" alt="LFEL1006" onclick="openModal(this)">
-    <img src="images/LFEL1007.png" alt="LFEL1007" onclick="openModal(this)">
-    <img src="images/LFEL1012.png" alt="LFEL1012" onclick="openModal(this)">
-    <img src="images/LFS116.png" alt="LFS116" onclick="openModal(this)">
-    
-    <!-- Mango -->
-    <img src="images/mg ad sch.png" alt="Microsoft AD Scheduler" onclick="openModal(this)">
-    <img src="images/mg enc.png" alt="Microsoft Encryption" onclick="openModal(this)">
-    <img src="images/mg sc.png" alt="Microsoft Security" onclick="openModal(this)">
-    <img src="images/mg sch.png" alt="Microsoft Scheduler" onclick="openModal(this)">
-    
-    <!-- Canva -->
-    <img src="images/canva cre.png" alt="Canva Creator" onclick="openModal(this)">
-    <img src="images/canva gr.png" alt="Canva Graphics" onclick="openModal(this)">
-    <img src="images/canva fu.jpeg" alt="Canva Fundamentals" onclick="openModal(this)">
-    <img src="images/canva hu.jpeg" alt="Canva Hub" onclick="openModal(this)">
-    
-    <!-- SAS -->
-    <img src="images/sas data.png" alt="SAS Data" onclick="openModal(this)">
-    <img src="images/sas sql.png" alt="SAS SQL" onclick="openModal(this)">
-    
-    <!-- Other -->
-    <img src="images/introduction_to_cip.png" alt="Introduction to CIP" onclick="openModal(this)">
-    
-    <!-- Screenshots -->
-    <img src="images/Screenshot_22-10-2025_153738_.jpeg" onclick="openModal(this)">
-    <img src="images/Screenshot_22-10-2025_15383_.jpeg" onclick="openModal(this)">
-    <img src="images/Screenshot_22-10-2025_15406_.jpeg" onclick="openModal(this)">
-    
-    <!-- M Series (KEPT AT END) -->
-    <img src="images/M (1).jpeg" onclick="openModal(this)">
-    <img src="images/M (2).jpeg" onclick="openModal(this)">
-    <img src="images/M (3).jpeg" onclick="openModal(this)">
-    <img src="images/M (4).jpeg" onclick="openModal(this)">
-    <img src="images/M (5).jpeg" onclick="openModal(this)">
-    <img src="images/M (6).jpeg" onclick="openModal(this)">
-    <img src="images/M (7).jpeg" onclick="openModal(this)">
-    <img src="images/M (8).jpeg" onclick="openModal(this)">
-    <img src="images/M (9).jpeg" onclick="openModal(this)">
-    <img src="images/M (10).jpeg" onclick="openModal(this)">
-    <img src="images/M (11).jpeg" onclick="openModal(this)">
-    <img src="images/M (12).jpeg" onclick="openModal(this)">
-    <img src="images/M (13).jpeg" onclick="openModal(this)">
-    <img src="images/M (14).jpeg" onclick="openModal(this)">
-    <img src="images/M (15).jpeg" onclick="openModal(this)">
-    <img src="images/M (16).jpeg" onclick="openModal(this)">
-    <img src="images/M (17).jpeg" onclick="openModal(this)">
-  </div>
+      <ul class="cert-list">
+        <li>Microsoft Azure Fundamentals</li>
+        <li>AWS Cloud Practitioner</li>
+        <li>Google Cloud Engineer</li>
+        <li>Digital Transformation – Google Cloud</li>
+        <li>Power BI, Docker, UX Design, .NET, XML</li>
+        <li>IELTS (6.5), Lifeguard Certification</li>
+      </ul>
 
-  <!-- Modal -->
-  <div id="imageModal" class="modal" onclick="closeModal()">
-    <span>&times;</span>
-    <img id="modalImage" src="">
-    <div class="caption" id="modalCaption"></div>
-  </div>
+      <div class="badge-gallery">
+        <img src="images/AWS cloud prac.png" alt="AWS Cloud Practitioner" onclick="openModal(this)">
+        <img src="images/AWS cloud.png" alt="AWS Cloud" onclick="openModal(this)">
+        <img src="images/AWS arch.png" alt="AWS Architecture" onclick="openModal(this)">
+        <img src="images/AWS eks.png" alt="AWS EKS" onclick="openModal(this)">
+        <img src="images/AWS ML.png" alt="AWS Machine Learning" onclick="openModal(this)">
+        <img src="images/aw clo.png" alt="AWS Cloud Overview" onclick="openModal(this)">
+        
+        <img src="images/Cisco PT.png" alt="Cisco Packet Tracer" onclick="openModal(this)">
+        <img src="images/Cisco sec.png" alt="Cisco Security" onclick="openModal(this)">
+        
+        <img src="images/FortiCy.png" alt="Fortinet Cybersecurity" onclick="openModal(this)">
+        <img src="images/forti1.png" alt="Fortinet Badge" onclick="openModal(this)">
+        <img src="images/fortiland.png" alt="Fortinet Fundamentals" onclick="openModal(this)">
+        <img src="images/nse.png" alt="Fortinet NSE" onclick="openModal(this)">
+        <img src="images/nse 1.png" alt="Fortinet NSE 1" onclick="openModal(this)">
+        <img src="images/nse 2.png" alt="Fortinet NSE 2" onclick="openModal(this)">
 
-  <script>
-    function openModal(img) {
-      const modal = document.getElementById("imageModal");
-      const modalImg = document.getElementById("modalImage");
-      const caption = document.getElementById("modalCaption");
-
-      modal.style.display = "flex";
-      modalImg.src = img.src;
-      caption.innerText = img.alt;
-    }
-
-    function closeModal() {
-      document.getElementById("imageModal").style.display = "none";
-    }
-  </script>
-</section>
-
-<section id="projects" class="projects">
-  <div class="container">
-    <h3>Automation & Development Projects</h3>
-    <ul>
-      <li>Automating invoice creation, modification, and cancellation processes</li>
-      <li>Automating client subscription workflows and contract database updates</li>
-      <li>Salary and mission calculation automation</li>
-      <li>Interactive forms and planning automation via VBA</li>
-      <li>Automated Outlook reminders and risk analysis dashboards</li>
-      <li>Autonomous drone defense system built for a hackathon, integrating real-time decision logic</li>
-      <li>Predictive analytics tool for cybersecurity threat modeling using machine learning</li>
-      <li>DevOps pipeline integrating Redis for caching and session management in scalable environments</li>
-      <li>Kubernetes deployment configurations and orchestration scripts for containerized applications</li>
-    </ul>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="container">
-    <h3>Profiles</h3>
-    <!-- <p class="email"><a href="mailto:younes.4b@gmail.com">younes.4b@gmail.com</a></p> -->
-
-    <div class="link-buttons">
-      <a href="https://www.cloudskillsboost.google/public_profiles/88b281b4-e7e0-4dca-8679-94fa4069471c" class="btn btn-white" target="_blank">Google Cloud Skills Boost</a>
-      <a href="https://www.credly.com/users/younes-sogandi" class="btn btn-white" target="_blank">Credly Badges</a>
-      <a href="https://credentials.databricks.com/profile/younessogandi209032/wallet" class="btn btn-white" target="_blank">Databricks Academy</a>
-      <a href="https://openprofile.dev/profile/younx" class="btn btn-white" target="_blank">Linux foundation</a>
-      <a href="https://learn.microsoft.com/en-us/users/YSogandi-6344" class="btn btn-white" target="_blank">Microsoft Learn</a>
-    </div>
-  </div>
-</section>
-
-  <footer class="site-footer">
-    <!-- <div class="container">
-      <p>© 2025 Hypster Portfolio. Built with ❤️ & retro vibes.</p>
-    </div> -->
-  </footer>
-
-</body>
-</html>
+        <img src="images/NeoFJ.png" alt="Neo4j certified" onclick="openModal(this)">
+        
+        <img src="images/G GCP.png" alt="Google Cloud Platform" onclick="openModal(this)">
+        <img src="images/G Big query.png" alt="Google BigQuery" onclick="openModal(this)">
+        <img src="images/G GenAI.png" alt="Google Generative AI" onclick="openModal(this)">
+        <img src="images/G LLM.png" alt="Google Large Language Models" onclick="openModal(this)">
+        <img src="images/G sheets.png" alt="Google Sheets" onclick="openModal(this)">
+        <img src="images/G Vertex Flutter.png" alt="Vertex AI Flutter" onclick="openModal(this)">
+        <img src="
