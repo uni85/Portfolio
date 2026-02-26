@@ -293,18 +293,47 @@
     <span class="close">&times;</span>
     <img class="modal-content" id="modalImg">
   </div>
-<script>
-function openModal(img) {
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImg");
-  modal.style.display = "block";
-  modalImg.src = img.src;
-}
 
-function closeModal() {
-  document.getElementById("imageModal").style.display = "none";
-}
-</script>
+  <script>
+    const root = document.documentElement;
+    const saved = localStorage.getItem('scheme');
+    if (saved === 'light') root.classList.add('light');
+
+    document.querySelector('.mode-toggle')?.addEventListener('click', () => {
+      root.classList.toggle('light');
+      localStorage.setItem('scheme', root.classList.contains('light') ? 'light' : 'dark');
+    });
+
+    const ro = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          ro.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -5% 0px", threshold: 0.08 });
+
+    document.querySelectorAll('.section, .card, .profile-card, .hero').forEach(el => {
+      el.classList.add('reveal');
+      ro.observe(el);
+    });
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.reveal').forEach(el => el.style.transition = 'none');
+    }
+
+    /* --- MODAL LOGIC --- */
+    function openModal(element) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImg");
+        modal.style.display = "block";
+        modalImg.src = element.src;
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
