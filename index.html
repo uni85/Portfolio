@@ -9,11 +9,10 @@
 
 <body>
 
-  <!-- Optional no‑JS light/dark via prefers-color-scheme -->
   <div class="grain" aria-hidden="true"></div>
 
   <header class="site-header glass">
-    <div class="container header-inner">
+    <div class="container">
       <h1 class="logo">Younes's Portfolio</h1>
       <nav class="site-nav">
         <a href="#education">Education</a>
@@ -27,832 +26,273 @@
 
   <section class="hero reveal">
     <div class="container">
-      <h2 class="hero-title">Data Engineering &amp; Cloud Solutions</h2>
+      <h2 class="hero-title">Data Engineering & Cloud Solutions</h2>
       <p class="hero-subtitle">Crafting intelligent systems with cloud, AI, and automation.</p>
       <a class="btn btn-primary" href="https://sites.google.com/view/portfolio-cv-badges-courses/home"
-         target="_blank" rel="noopener noreferrer">
+        target="_blank" rel="noopener noreferrer">
         View Google Portfolio
       </a>
     </div>
   </section>
 
-  <main class="site-wrapper">
-
-    <section id="about" class="section glass reveal">
-      <div class="container">
-        <h3 class="section-title">About Me</h3>
-        <p class="emoji-row" aria-hidden="true">🖥️🔧🌱🏊‍🧗‍</p>
-        <p>
-          I channel my passion for technology into designing systems that move with clarity and purpose, much like the tranquil world of aquariophilia that grounds me, the weightless serenity of swimming that restores me, and the gravity‑defying dance of bouldering that teaches me resilience.
-        </p>
-      </div>
-    </section>
-
-    <section id="education" class="section reveal">
-      <div class="container">
-        <h3 class="section-title">Education</h3>
-
-        <div class="card">
-          <h4>DSTI – Data ScienceTech Institute, Paris</h4>
-          <p><strong>Master:</strong> Data Engineering for AI</p>
-          <p>Cloud computing, Python machine learning, neural networks, deep learning, CRM management, R, SQL, ETL, data warehousing.</p>
-          <span class="date">Sep 2024 – Jul 2026</span>
-        </div>
-
-        <div class="card">
-          <h4>SANS Institute – Cybersecurity Labs (SkillQuest)</h4>
-          <p><strong>Program:</strong> Cybersecurity Hands‑On Labs</p>
-          <p>Network &amp; security (SAN configuration, SkillQuest labs, NetWars, ELK stack, Kibana, Elasticsearch, system monitoring).</p>
-          <span class="date">Oct 2025 – May 2026</span>
-        </div>
-
-        <div class="card">
-          <h4>Cisco Ethical Hacking Course</h4>
-          <p><strong>Certification:</strong> Ethical Hacking &amp; Cyber Defense</p>
-          <p>Kali Linux, Wireshark, Nmap, Metasploit, Burp Suite, Hydra, John the Ripper, Linux terminal tools, packet sniffers, port scanners, vulnerability scanners, web‑security testing frameworks</p>
-          <span class="date">Dec 2025 – Jun 2026</span>
-        </div>
-
-        <div class="card">
-          <h4>CNAM Paris &amp; Île-de-France</h4>
-          <p><strong>Bachelor:</strong> Information Technology</p>
-          <p>UML modeling, PHP, Java, C, XML programming, statistical analysis, project management.</p>
-          <span class="date">Sep 2021 – Jun 2024</span>
-        </div>
-
-        <div class="card">
-          <h4>Tehran Institute of Technology</h4>
-          <p><strong>Certificates:</strong></p>
-          <p>Web Design (HTML5, CSS3, PHP, Bootstrap)</p>
-          <p>Network+ (CompTIA)</p>
-          <span class="date">Jan 2020 – Jul 2021</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section glass reveal">
-      <div class="container">
-        <h3 class="section-title">Professional Experiences</h3>
-
-        <div class="card">
-          <h4>AXA Insurance – Compliance Department (Nanterre, 92)</h4>
-          <p>Modernizing legacy systems through Microsoft solutions:
-            SharePoint automation, Databricks notebooks, Power Apps forms, Power Automate workflows, and Power BI dashboards.
-            Improved collaboration and operational efficiency across cloud services.</p>
-          <span class="date">Sep 2024 – Jul 2026</span>
-        </div>
-
-        <div class="card">
-          <h4>AXA Insurance – Risk Control Department (Nanterre, 92)</h4>
-          <p>Developed VBA applications for automated dashboards, dynamic reporting, invoice workflows, and risk calculations.
-            Performed SQL analysis in SAS, contributed to Agile cycles, and supported SharePoint administration.</p>
-          <span class="date">Feb 2024 – Aug 2024</span>
-        </div>
-
-        <div class="card">
-          <h4>Hellmann Worldwide Logistics (Villepinte, 95)</h4>
-          <p>Created automation tools for invoicing, client onboarding, database updates, employee salary calculation,
-            and planning systems using Visual Basic for Applications (VBA) and Excel automation.</p>
-          <span class="date">Sep 2023 – Jan 2024</span>
-        </div>
-
-        <div class="card">
-          <h4>Doggies et Compagnie (Bois-Colombes, 92)</h4>
-          <p>Developing applications for: automate creating, modifying and cancelling invoices - automate subscription of new clients and filling the contract’s data base - auto calculate the salary and missions for each employee - auto fill the planning files by programming and using interactive forms in Visual Basic for applications. Managed administrative workflows and contributed to improving service logistics and planning efficiency.</p>
-          <span class="date">Feb 2022 – Feb 2024</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="certificates" class="section reveal">
-      <div class="container">
-        <h3 class="section-title">Certificates &amp; Skill Badges</h3>
-
-        <ul class="cert-list">
-          <li>Microsoft Azure Fundamentals</li>
-          <li>AWS Cloud Practitioner</li>
-          <li>Google Cloud Engineer</li>
-          <li>Digital Transformation – Google Cloud</li>
-          <li>Power BI, Docker, UX Design, .NET, XML</li>
-          <li>IELTS (6.5), Lifeguard Certification</li>
-        </ul>
-
-        <!-- CSS-only modal system: one checkbox + one modal, image source swapped via :target-like approach is not possible without JS,
-             so we use "one big image" with independent checkboxes per image. -->
-
-        <!-- For performance, here’s the pattern for a few images.
-             You can repeat it for all your badges if you want full modal support. -->
-
-        <div class="badge-gallery">
-        
-          <!-- AWS -->
-          <input type="checkbox" id="badge-aws-prac" class="modal-check">
-          <label for="badge-aws-prac" class="badge-label">
-            <img src="images/AWS cloud prac.png" alt="AWS Cloud Practitioner">
-          </label>
-          <label for="badge-aws-prac" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/AWS cloud prac.png" alt="AWS Cloud Practitioner" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-aws-cloud" class="modal-check">
-          <label for="badge-aws-cloud" class="badge-label">
-            <img src="images/AWS cloud.png" alt="AWS Cloud">
-          </label>
-          <label for="badge-aws-cloud" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/AWS cloud.png" alt="AWS Cloud" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-aws-arch" class="modal-check">
-          <label for="badge-aws-arch" class="badge-label">
-            <img src="images/AWS arch.png" alt="AWS Architecture">
-          </label>
-          <label for="badge-aws-arch" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/AWS arch.png" alt="AWS Architecture" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-aws-eks" class="modal-check">
-          <label for="badge-aws-eks" class="badge-label">
-            <img src="images/AWS eks.png" alt="AWS EKS">
-          </label>
-          <label for="badge-aws-eks" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/AWS eks.png" alt="AWS EKS" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-aws-ml" class="modal-check">
-          <label for="badge-aws-ml" class="badge-label">
-            <img src="images/AWS ML.png" alt="AWS Machine Learning">
-          </label>
-          <label for="badge-aws-ml" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/AWS ML.png" alt="AWS Machine Learning" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-aws-clo" class="modal-check">
-          <label for="badge-aws-clo" class="badge-label">
-            <img src="images/aw clo.png" alt="AWS Cloud Overview">
-          </label>
-          <label for="badge-aws-clo" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/aw clo.png" alt="AWS Cloud Overview" class="modal-img">
-          </label>
-        
-          <!-- Cisco -->
-          <input type="checkbox" id="badge-cisco-pt" class="modal-check">
-          <label for="badge-cisco-pt" class="badge-label">
-            <img src="images/Cisco PT.png" alt="Cisco Packet Tracer">
-          </label>
-          <label for="badge-cisco-pt" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/Cisco PT.png" alt="Cisco Packet Tracer" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-cisco-sec" class="modal-check">
-          <label for="badge-cisco-sec" class="badge-label">
-            <img src="images/Cisco sec.png" alt="Cisco Security">
-          </label>
-          <label for="badge-cisco-sec" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/Cisco sec.png" alt="Cisco Security" class="modal-img">
-          </label>
-        
-          <!-- Fortinet -->
-          <input type="checkbox" id="badge-forti-cy" class="modal-check">
-          <label for="badge-forti-cy" class="badge-label">
-            <img src="images/FortiCy.png" alt="Fortinet Cybersecurity">
-          </label>
-          <label for="badge-forti-cy" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/FortiCy.png" alt="Fortinet Cybersecurity" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-forti-1" class="modal-check">
-          <label for="badge-forti-1" class="badge-label">
-            <img src="images/forti1.png" alt="Fortinet Badge">
-          </label>
-          <label for="badge-forti-1" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/forti1.png" alt="Fortinet Badge" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-fortiland" class="modal-check">
-          <label for="badge-fortiland" class="badge-label">
-            <img src="images/fortiland.png" alt="Fortinet Fundamentals">
-          </label>
-          <label for="badge-fortiland" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/fortiland.png" alt="Fortinet Fundamentals" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-nse" class="modal-check">
-          <label for="badge-nse" class="badge-label">
-            <img src="images/nse.png" alt="Fortinet NSE">
-          </label>
-          <label for="badge-nse" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/nse.png" alt="Fortinet NSE" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-nse1" class="modal-check">
-          <label for="badge-nse1" class="badge-label">
-            <img src="images/nse 1.png" alt="Fortinet NSE 1">
-          </label>
-          <label for="badge-nse1" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/nse 1.png" alt="Fortinet NSE 1" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-nse2" class="modal-check">
-          <label for="badge-nse2" class="badge-label">
-            <img src="images/nse 2.png" alt="Fortinet NSE 2">
-          </label>
-          <label for="badge-nse2" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/nse 2.png" alt="Fortinet NSE 2" class="modal-img">
-          </label>
-        
-          <!-- Neo4j -->
-          <input type="checkbox" id="badge-neo4j" class="modal-check">
-          <label for="badge-neo4j" class="badge-label">
-            <img src="images/NeoFJ.png" alt="Neo4j certified">
-          </label>
-          <label for="badge-neo4j" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/NeoFJ.png" alt="Neo4j certified" class="modal-img">
-          </label>
-        
-          <!-- Google Cloud -->
-          <input type="checkbox" id="badge-g-gcp" class="modal-check">
-          <label for="badge-g-gcp" class="badge-label">
-            <img src="images/G GCP.png" alt="Google Cloud Platform">
-          </label>
-          <label for="badge-g-gcp" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/G GCP.png" alt="Google Cloud Platform" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-g-bq" class="modal-check">
-          <label for="badge-g-bq" class="badge-label">
-            <img src="images/G Big query.png" alt="Google BigQuery">
-          </label>
-          <label for="badge-g-bq" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/G Big query.png" alt="Google BigQuery" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-g-genai" class="modal-check">
-          <label for="badge-g-genai" class="badge-label">
-            <img src="images/G GenAI.png" alt="Google Generative AI">
-          </label>
-          <label for="badge-g-genai" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/G GenAI.png" alt="Google Generative AI" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-g-llm" class="modal-check">
-          <label for="badge-g-llm" class="badge-label">
-            <img src="images/G LLM.png" alt="Google Large Language Models">
-          </label>
-          <label for="badge-g-llm" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/G LLM.png" alt="Google Large Language Models" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-g-sheets" class="modal-check">
-          <label for="badge-g-sheets" class="badge-label">
-            <img src="images/G sheets.png" alt="Google Sheets">
-          </label>
-          <label for="badge-g-sheets" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/G sheets.png" alt="Google Sheets" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-g-v-flutter" class="modal-check">
-          <label for="badge-g-v-flutter" class="badge-label">
-            <img src="images/G Vertex Flutter.png" alt="Vertex AI Flutter">
-          </label>
-          <label for="badge-g-v-flutter" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/G Vertex Flutter.png" alt="Vertex AI Flutter" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-g-v-streamlit" class="modal-check">
-          <label for="badge-g-v-streamlit" class="badge-label">
-            <img src="images/G Vertex streamlit.png" alt="Vertex AI Streamlit">
-          </label>
-          <label for="badge-g-v-streamlit" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/G Vertex streamlit.png" alt="Vertex AI Streamlit" class="modal-img">
-          </label>
-        
-          <!-- Databricks -->
-          <input type="checkbox" id="badge-db-gcp" class="modal-check">
-          <label for="badge-db-gcp" class="badge-label">
-            <img src="images/db gcp.png" alt="Databricks GCP">
-          </label>
-          <label for="badge-db-gcp" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/db gcp.png" alt="Databricks GCP" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-db-de" class="modal-check">
-          <label for="badge-db-de" class="badge-label">
-            <img src="images/db de-Photoroom.png" alt="Databricks Data Engineering">
-          </label>
-          <label for="badge-db-de" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/db de-Photoroom.png" alt="Databricks Data Engineering" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-db-ml" class="modal-check">
-          <label for="badge-db-ml" class="badge-label">
-            <img src="images/db ml-Photoroom.png" alt="Databricks Machine Learning">
-          </label>
-          <label for="badge-db-ml" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/db ml-Photoroom.png" alt="Databricks Machine Learning" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-db-spark" class="modal-check">
-          <label for="badge-db-spark" class="badge-label">
-            <img src="images/db spark.png" alt="Apache Spark">
-          </label>
-          <label for="badge-db-spark" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/db spark.png" alt="Apache Spark" class="modal-img">
-          </label>
-        
-          <!-- IBM -->
-          <input type="checkbox" id="badge-ibm-ux" class="modal-check">
-          <label for="badge-ibm-ux" class="badge-label">
-            <img src="images/IBM ux.png" alt="IBM UX Design">
-          </label>
-          <label for="badge-ibm-ux" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/IBM ux.png" alt="IBM UX Design" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-ibm-ai" class="modal-check">
-          <label for="badge-ibm-ai" class="badge-label">
-            <img src="images/bm ai.png" alt="IBM AI">
-          </label>
-          <label for="badge-ibm-ai" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/bm ai.png" alt="IBM AI" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-ibm-cy" class="modal-check">
-          <label for="badge-ibm-cy" class="badge-label">
-            <img src="images/bm cy.png" alt="IBM Cybersecurity">
-          </label>
-          <label for="badge-ibm-cy" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/bm cy.png" alt="IBM Cybersecurity" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-ibm-ux2" class="modal-check">
-          <label for="badge-ibm-ux2" class="badge-label">
-            <img src="images/bm ux.png" alt="IBM UX">
-          </label>
-          <label for="badge-ibm-ux2" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/bm ux.png" alt="IBM UX" class="modal-img">
-          </label>
-        
-          <!-- Linux Foundation -->
-          <input type="checkbox" id="badge-lfc108" class="modal-check">
-          <label for="badge-lfc108" class="badge-label">
-            <img src="images/LFC 108.png" alt="Linux Foundation LFC108">
-          </label>
-          <label for="badge-lfc108" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/LFC 108.png" alt="Linux Foundation LFC108" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-lfd104" class="modal-check">
-          <label for="badge-lfd104" class="badge-label">
-            <img src="images/LFD104.png" alt="Linux Foundation LFD104">
-          </label>
-          <label for="badge-lfd104" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/LFD104.png" alt="Linux Foundation LFD104" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-lfel1001" class="modal-check">
-          <label for="badge-lfel1001" class="badge-label">
-            <img src="images/LFEL1001.png" alt="LFEL1001">
-          </label>
-          <label for="badge-lfel1001" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/LFEL1001.png" alt="LFEL1001" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-lfel1005" class="modal-check">
-          <label for="badge-lfel1005" class="badge-label">
-            <img src="images/LFEL1005.png" alt="LFEL1005">
-          </label>
-          <label for="badge-lfel1005" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/LFEL1005.png" alt="LFEL1005" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-lfel1006" class="modal-check">
-          <label for="badge-lfel1006" class="badge-label">
-            <img src="images/LFEL1006.png" alt="LFEL1006">
-          </label>
-          <label for="badge-lfel1006" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/LFEL1006.png" alt="LFEL1006" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-lfel1007" class="modal-check">
-          <label for="badge-lfel1007" class="badge-label">
-            <img src="images/LFEL1007.png" alt="LFEL1007">
-          </label>
-          <label for="badge-lfel1007" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/LFEL1007.png" alt="LFEL1007" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-lfel1012" class="modal-check">
-          <label for="badge-lfel1012" class="badge-label">
-            <img src="images/LFEL1012.png" alt="LFEL1012">
-          </label>
-          <label for="badge-lfel1012" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/LFEL1012.png" alt="LFEL1012" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-lfs116" class="modal-check">
-          <label for="badge-lfs116" class="badge-label">
-            <img src="images/LFS116.png" alt="LFS116">
-          </label>
-          <label for="badge-lfs116" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/LFS116.png" alt="LFS116" class="modal-img">
-          </label>
-        
-          <!-- Microsoft -->
-          <input type="checkbox" id="badge-mg-ad-sch" class="modal-check">
-          <label for="badge-mg-ad-sch" class="badge-label">
-            <img src="images/mg ad sch.png" alt="Microsoft AD Scheduler">
-          </label>
-          <label for="badge-mg-ad-sch" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/mg ad sch.png" alt="Microsoft AD Scheduler" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-mg-enc" class="modal-check">
-          <label for="badge-mg-enc" class="badge-label">
-            <img src="images/mg enc.png" alt="Microsoft Encryption">
-          </label>
-          <label for="badge-mg-enc" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/mg enc.png" alt="Microsoft Encryption" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-mg-sc" class="modal-check">
-          <label for="badge-mg-sc" class="badge-label">
-            <img src="images/mg sc.png" alt="Microsoft Security">
-          </label>
-          <label for="badge-mg-sc" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/mg sc.png" alt="Microsoft Security" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-mg-sch" class="modal-check">
-          <label for="badge-mg-sch" class="badge-label">
-            <img src="images/mg sch.png" alt="Microsoft Scheduler">
-          </label>
-          <label for="badge-mg-sch" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/mg sch.png" alt="Microsoft Scheduler" class="modal-img">
-          </label>
-        
-          <!-- Canva -->
-          <input type="checkbox" id="badge-canva-cre" class="modal-check">
-          <label for="badge-canva-cre" class="badge-label">
-            <img src="images/canva cre.png" alt="Canva Creator">
-          </label>
-          <label for="badge-canva-cre" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/canva cre.png" alt="Canva Creator" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-canva-gr" class="modal-check">
-          <label for="badge-canva-gr" class="badge-label">
-            <img src="images/canva gr.png" alt="Canva Graphics">
-          </label>
-          <label for="badge-canva-gr" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/canva gr.png" alt="Canva Graphics" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-canva-fu" class="modal-check">
-          <label for="badge-canva-fu" class="badge-label">
-            <img src="images/canva fu.jpeg" alt="Canva Fundamentals">
-          </label>
-          <label for="badge-canva-fu" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/canva fu.jpeg" alt="Canva Fundamentals" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-canva-hu" class="modal-check">
-          <label for="badge-canva-hu" class="badge-label">
-            <img src="images/canva hu.jpeg" alt="Canva Hub">
-          </label>
-          <label for="badge-canva-hu" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/canva hu.jpeg" alt="Canva Hub" class="modal-img">
-          </label>
-        
-          <!-- SAS & CIP -->
-          <input type="checkbox" id="badge-sas-data" class="modal-check">
-          <label for="badge-sas-data" class="badge-label">
-            <img src="images/sas data.png" alt="SAS Data">
-          </label>
-          <label for="badge-sas-data" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/sas data.png" alt="SAS Data" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-sas-sql" class="modal-check">
-          <label for="badge-sas-sql" class="badge-label">
-            <img src="images/sas sql.png" alt="SAS SQL">
-          </label>
-          <label for="badge-sas-sql" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/sas sql.png" alt="SAS SQL" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-cip" class="modal-check">
-          <label for="badge-cip" class="badge-label">
-            <img src="images/introduction_to_cip.png" alt="Introduction to CIP">
-          </label>
-          <label for="badge-cip" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/introduction_to_cip.png" alt="Introduction to CIP" class="modal-img">
-          </label>
-        
-          <!-- Screenshots -->
-          <input type="checkbox" id="badge-ss1" class="modal-check">
-          <label for="badge-ss1" class="badge-label">
-            <img src="images/Screenshot_22-10-2025_153738_.jpeg" alt="Screenshot 1">
-          </label>
-          <label for="badge-ss1" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/Screenshot_22-10-2025_153738_.jpeg" alt="Screenshot 1" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-ss2" class="modal-check">
-          <label for="badge-ss2" class="badge-label">
-            <img src="images/Screenshot_22-10-2025_15383_.jpeg" alt="Screenshot 2">
-          </label>
-          <label for="badge-ss2" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/Screenshot_22-10-2025_15383_.jpeg" alt="Screenshot 2" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-ss3" class="modal-check">
-          <label for="badge-ss3" class="badge-label">
-            <img src="images/Screenshot_22-10-2025_15406_.jpeg" alt="Screenshot 3">
-          </label>
-          <label for="badge-ss3" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/Screenshot_22-10-2025_15406_.jpeg" alt="Screenshot 3" class="modal-img">
-          </label>
-        
-          <!-- M(1)–M(17) -->
-          <input type="checkbox" id="badge-m1" class="modal-check">
-          <label for="badge-m1" class="badge-label">
-            <img src="images/M (1).jpeg" alt="Certificate M1">
-          </label>
-          <label for="badge-m1" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (1).jpeg" alt="Certificate M1" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m2" class="modal-check">
-          <label for="badge-m2" class="badge-label">
-            <img src="images/M (2).jpeg" alt="Certificate M2">
-          </label>
-          <label for="badge-m2" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (2).jpeg" alt="Certificate M2" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m3" class="modal-check">
-          <label for="badge-m3" class="badge-label">
-            <img src="images/M (3).jpeg" alt="Certificate M3">
-          </label>
-          <label for="badge-m3" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (3).jpeg" alt="Certificate M3" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m4" class="modal-check">
-          <label for="badge-m4" class="badge-label">
-            <img src="images/M (4).jpeg" alt="Certificate M4">
-          </label>
-          <label for="badge-m4" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (4).jpeg" alt="Certificate M4" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m5" class="modal-check">
-          <label for="badge-m5" class="badge-label">
-            <img src="images/M (5).jpeg" alt="Certificate M5">
-          </label>
-          <label for="badge-m5" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (5).jpeg" alt="Certificate M5" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m6" class="modal-check">
-          <label for="badge-m6" class="badge-label">
-            <img src="images/M (6).jpeg" alt="Certificate M6">
-          </label>
-          <label for="badge-m6" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (6).jpeg" alt="Certificate M6" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m7" class="modal-check">
-          <label for="badge-m7" class="badge-label">
-            <img src="images/M (7).jpeg" alt="Certificate M7">
-          </label>
-          <label for="badge-m7" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (7).jpeg" alt="Certificate M7" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m8" class="modal-check">
-          <label for="badge-m8" class="badge-label">
-            <img src="images/M (8).jpeg" alt="Certificate M8">
-          </label>
-          <label for="badge-m8" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (8).jpeg" alt="Certificate M8" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m9" class="modal-check">
-          <label for="badge-m9" class="badge-label">
-            <img src="images/M (9).jpeg" alt="Certificate M9">
-          </label>
-          <label for="badge-m9" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (9).jpeg" alt="Certificate M9" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m10" class="modal-check">
-          <label for="badge-m10" class="badge-label">
-            <img src="images/M (10).jpeg" alt="Certificate M10">
-          </label>
-          <label for="badge-m10" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (10).jpeg" alt="Certificate M10" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m11" class="modal-check">
-          <label for="badge-m11" class="badge-label">
-            <img src="images/M (11).jpeg" alt="Certificate M11">
-          </label>
-          <label for="badge-m11" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (11).jpeg" alt="Certificate M11" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m12" class="modal-check">
-          <label for="badge-m12" class="badge-label">
-            <img src="images/M (12).jpeg" alt="Certificate M12">
-          </label>
-          <label for="badge-m12" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (12).jpeg" alt="Certificate M12" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m13" class="modal-check">
-          <label for="badge-m13" class="badge-label">
-            <img src="images/M (13).jpeg" alt="Certificate M13">
-          </label>
-          <label for="badge-m13" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (13).jpeg" alt="Certificate M13" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m14" class="modal-check">
-          <label for="badge-m14" class="badge-label">
-            <img src="images/M (14).jpeg" alt="Certificate M14">
-          </label>
-          <label for="badge-m14" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (14).jpeg" alt="Certificate M14" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m15" class="modal-check">
-          <label for="badge-m15" class="badge-label">
-            <img src="images/M (15).jpeg" alt="Certificate M15">
-          </label>
-          <label for="badge-m15" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (15).jpeg" alt="Certificate M15" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m16" class="modal-check">
-          <label for="badge-m16" class="badge-label">
-            <img src="images/M (16).jpeg" alt="Certificate M16">
-          </label>
-          <label for="badge-m16" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (16).jpeg" alt="Certificate M16" class="modal-img">
-          </label>
-        
-          <input type="checkbox" id="badge-m17" class="modal-check">
-          <label for="badge-m17" class="badge-label">
-            <img src="images/M (17).jpeg" alt="Certificate M17">
-          </label>
-          <label for="badge-m17" class="modal-overlay">
-            <span class="modal-close">&times;</span>
-            <img src="images/M (17).jpeg" alt="Certificate M17" class="modal-img">
-          </label>
-        
-        </div>
-
-    </section>
-
-    <section id="projects" class="section glass reveal">
-      <div class="container">
-        <h3 class="section-title">Projects</h3>
-        <ul class="project-list">
-          <li>Invoice Automation Workflows – Automated generation, distribution, and tracking of invoices with Power Automate, VBA, and Dataverse.</li>
-          <li>Predictive Cyber Threat Analytics – Built ML pipelines, anomaly detection metrics, and security dashboards.</li>
-          <li>Microsoft Developer Systems Modernization – SharePoint migration, Databricks notebook automation, Power Apps/Power BI integration.</li>
-          <li>Kubernetes Deployment Pipelines – CI/CD deployment strategies for scalable microservices.</li>
-          <li>Drone Defense System (Hackathon) – Developed defense logic &amp; automation modules for detection and rapid response.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="section reveal">
-      <div class="container">
-        <h3 class="section-title">Profiles</h3>
-
-        <div class="profile-grid">
-          <div class="profile-card">
-            <img src="icons/github.png" alt="GitHub" class="profile-icon">
-            <h4>GitHub</h4>
-            <p>Projects, automation, DevOps labs</p>
-            <a class="profile-btn" href="https://github.com/uni85" target="_blank" rel="noopener noreferrer">Visit Profile</a>
-          </div>
-
-          <div class="profile-card">
-            <img src="icons/google.png" alt="Google Cloud" class="profile-icon">
-            <h4>Google Cloud</h4>
-            <p>Skill badges &amp; cloud labs</p>
-            <a class="profile-btn" href="https://www.cloudskillsboost.google/public_profiles/88b281b4-e7e0-4dca-8679-94fa4069471c" target="_blank" rel="noopener noreferrer">View Achievements</a>
-          </div>
-
-          <div class="profile-card">
-            <img src="icons/credly.png" alt="Credly" class="profile-icon">
-            <h4>Credly</h4>
-            <p>Official certifications</p>
-            <a class="profile-btn" href="https://www.credly.com/users/younes-sogandi" target="_blank" rel="noopener noreferrer">Open Profile</a>
-          </div>
-
-          <div class="profile-card">
-            <img src="icons/databricks.png" alt="Databricks" class="profile-icon">
-            <h4>Databricks</h4>
-            <p>Lakehouse badges &amp; SQL labs</p>
-            <a class="profile-btn" href="https://credentials.databricks.com/profile/younessogandi209032/wallet" target="_blank" rel="noopener noreferrer">View Badges</a>
-          </div>
-
-          <div class="profile-card">
-            <img src="icons/linux-foundation.png" alt="Linux Foundation" class="profile-icon">
-            <h4>Linux Foundation</h4>
-            <p>Open-source contributions</p>
-            <a class="profile-btn" href="https://openprofile.dev/profile/younx" target="_blank" rel="noopener noreferrer">Explore Profile</a>
-          </div>
-
-          <div class="profile-card">
-            <img src="icons/microsoft.png" alt="Microsoft Learn" class="profile-icon">
-            <h4>Microsoft Learn</h4>
-            <p>Azure learning paths &amp; labs</p>
-            <a class="profile-btn" href="https://learn.microsoft.com/en-us/users/YSogandi-6344" target="_blank" rel="noopener noreferrer">View Learning</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
+  <section id="about" class="section glass reveal">
     <div class="container">
-      <p>&copy; 2026 Younes. All Rights Reserved.</p>
+      <h3 class="section-title">About Me</h3>
+      <p class="emoji-row" aria-hidden="true">🖥️🔧🌱🏊‍🧗‍</p>
+      <p>
+        I channel my passion for technology into designing systems that move with clarity and purpose, much like the tranquil world of aquariophilia that grounds me, the weightless serenity of swimming that restores me, and the gravity‑defying dance of bouldering that teaches me resilience.
+      </p>
     </div>
-  </footer>
+  </section>
+
+  <section id="education" class="section reveal">
+    <div class="container">
+      <h3 class="section-title">Education</h3>
+
+      <div class="card">
+        <h4>DSTI – Data ScienceTech Institute, Paris</h4>
+        <p><strong>Master:</strong> Data Engineering for AI</p>
+        <p>Cloud computing, Python machine learning, neural networks, deep learning, CRM management, R, SQL, ETL, data warehousing.</p>
+        <span class="date">Sep 2024 – Jul 2026</span>
+      </div>
+
+      <div class="card">
+        <h4>SANS Institute – Cybersecurity Labs (SkillQuest)</h4>
+        <p><strong>Program:</strong> Cybersecurity Hands‑On Labs</p>
+        <p>Network & security (SAN configuration, SkillQuest labs, NetWars, ELK stack, Kibana, Elasticsearch, system monitoring).</p>
+        <span class="date">Oct 2025 – May 2026</span>
+      </div>
+
+      <div class="card">
+        <h4>Cisco Ethical Hacking Course</h4>
+        <p><strong>Certification:</strong> Ethical Hacking & Cyber Defense</p>
+        <p>Kali Linux, Wireshark, Nmap, Metasploit, Burp Suite, Hydra, John the Ripper, Linux terminal tools, packet sniffers, port scanners, vulnerability scanners, web‑security testing frameworks</p>
+        <span class="date">Dec 2025 – Jun 2026</span>
+      </div>
+
+      <div class="card">
+        <h4>CNAM Paris & Île-de-France</h4>
+        <p><strong>Bachelor:</strong> Information Technology</p>  
+        <p>UML modeling, PHP, Java, C, XML programming, statistical analysis, project management.</p>
+        <span class="date">Sep 2021 – Jun 2024</span>
+      </div>
+
+      <div class="card">
+        <h4>Tehran Institute of Technology</h4>
+        <p><strong>Certificates:</strong></p>
+		<p>Web Design (HTML5, CSS3, PHP, Bootstrap)</p>
+		<p> Network+ (CompTIA)</p>
+        <span class="date">Jan 2020 – Jul 2021</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section glass reveal">
+    <div class="container">
+      <h3 class="section-title">Professional Experiences</h3>
+
+      <div class="card">
+        <h4>AXA Insurance – Compliance Department (Nanterre, 92)</h4>
+        <p>Modernizing legacy systems through Microsoft solutions:  
+          SharePoint automation, Databricks notebooks, Power Apps forms, Power Automate workflows, and Power BI dashboards.  
+          Improved collaboration and operational efficiency across cloud services.</p>
+        <span class="date">Sep 2024 – Jul 2026</span>
+      </div>
+
+      <div class="card">
+        <h4>AXA Insurance – Risk Control Department (Nanterre, 92)</h4>
+        <p>Developed VBA applications for automated dashboards, dynamic reporting, invoice workflows, and risk calculations.  
+          Performed SQL analysis in SAS, contributed to Agile cycles, and supported SharePoint administration.</p>
+        <span class="date">Feb 2024 – Aug 2024</span>
+      </div>
+
+      <div class="card">
+        <h4>Hellmann Worldwide Logistics (Villepinte, 95)</h4>
+        <p>Created automation tools for invoicing, client onboarding, database updates, employee salary calculation,  
+          and planning systems using Visual Basic for Applications (VBA) and Excel automation.</p>
+        <span class="date">Sep 2023 – Jan 2024</span>
+      </div>
+
+      <div class="card">
+        <h4>Doggies et Compagnie (Bois-Colombes, 92)</h4>
+        <p>Developing applications for: automate creating, modifying and cancelling invoices - automate subscription of new clients and filling the contract’s data base - auto calculate the salary and missions for each employee - auto fill the planning files by programming and using interactive forms in Visual Basic for applications. Managed administrative workflows and contributed to improving service logistics and planning efficiency.</p>
+        <span class="date">Feb 2022 – Feb 2024</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates" class="section reveal">
+    <div class="container">
+      <h3 class="section-title">Certificates & Skill Badges</h3>
+
+      <ul class="cert-list">
+        <li>Microsoft Azure Fundamentals</li>
+        <li>AWS Cloud Practitioner</li>
+        <li>Google Cloud Engineer</li>
+        <li>Digital Transformation – Google Cloud</li>
+        <li>Power BI, Docker, UX Design, .NET, XML</li>
+        <li>IELTS (6.5), Lifeguard Certification</li>
+      </ul>
+
+      <div class="badge-gallery">
+        <img src="images/AWS cloud prac.png" alt="AWS Cloud Practitioner" onclick="openModal(this)">
+        <img src="images/AWS cloud.png" alt="AWS Cloud" onclick="openModal(this)">
+        <img src="images/AWS arch.png" alt="AWS Architecture" onclick="openModal(this)">
+        <img src="images/AWS eks.png" alt="AWS EKS" onclick="openModal(this)">
+        <img src="images/AWS ML.png" alt="AWS Machine Learning" onclick="openModal(this)">
+        <img src="images/aw clo.png" alt="AWS Cloud Overview" onclick="openModal(this)">
+        
+        <img src="images/Cisco PT.png" alt="Cisco Packet Tracer" onclick="openModal(this)">
+        <img src="images/Cisco sec.png" alt="Cisco Security" onclick="openModal(this)">
+        
+        <img src="images/FortiCy.png" alt="Fortinet Cybersecurity" onclick="openModal(this)">
+        <img src="images/forti1.png" alt="Fortinet Badge" onclick="openModal(this)">
+        <img src="images/fortiland.png" alt="Fortinet Fundamentals" onclick="openModal(this)">
+        <img src="images/nse.png" alt="Fortinet NSE" onclick="openModal(this)">
+        <img src="images/nse 1.png" alt="Fortinet NSE 1" onclick="openModal(this)">
+        <img src="images/nse 2.png" alt="Fortinet NSE 2" onclick="openModal(this)">
+
+        <img src="images/NeoFJ.png" alt="Neo4j certified" onclick="openModal(this)">
+        
+        <img src="images/G GCP.png" alt="Google Cloud Platform" onclick="openModal(this)">
+        <img src="images/G Big query.png" alt="Google BigQuery" onclick="openModal(this)">
+        <img src="images/G GenAI.png" alt="Google Generative AI" onclick="openModal(this)">
+        <img src="images/G LLM.png" alt="Google Large Language Models" onclick="openModal(this)">
+        <img src="images/G sheets.png" alt="Google Sheets" onclick="openModal(this)">
+        <img src="images/G Vertex Flutter.png" alt="Vertex AI Flutter" onclick="openModal(this)">
+        <img src="images/G Vertex streamlit.png" alt="Vertex AI Streamlit" onclick="openModal(this)">
+        
+        <img src="images/db gcp.png" alt="Databricks GCP" onclick="openModal(this)">
+        <img src="images/db de-Photoroom.png" alt="Databricks Data Engineering" onclick="openModal(this)">
+        <img src="images/db ml-Photoroom.png" alt="Databricks Machine Learning" onclick="openModal(this)">
+        <img src="images/db spark.png" alt="Apache Spark" onclick="openModal(this)">
+        
+        <img src="images/IBM ux.png" alt="IBM UX Design" onclick="openModal(this)">
+        <img src="images/bm ai.png" alt="IBM AI" onclick="openModal(this)">
+        <img src="images/bm cy.png" alt="IBM Cybersecurity" onclick="openModal(this)">
+        <img src="images/bm ux.png" alt="IBM UX" onclick="openModal(this)">
+        
+        <img src="images/LFC 108.png" alt="Linux Foundation LFC108" onclick="openModal(this)">
+        <img src="images/LFD104.png" alt="Linux Foundation LFD104" onclick="openModal(this)">
+        <img src="images/LFEL1001.png" alt="LFEL1001" onclick="openModal(this)">
+        <img src="images/LFEL1005.png" alt="LFEL1005" onclick="openModal(this)">
+        <img src="images/LFEL1006.png" alt="LFEL1006" onclick="openModal(this)">
+        <img src="images/LFEL1007.png" alt="LFEL1007" onclick="openModal(this)">
+        <img src="images/LFEL1012.png" alt="LFEL1012" onclick="openModal(this)">
+        <img src="images/LFS116.png" alt="LFS116" onclick="openModal(this)">
+        
+        <img src="images/mg ad sch.png" alt="Microsoft AD Scheduler" onclick="openModal(this)">
+        <img src="images/mg enc.png" alt="Microsoft Encryption" onclick="openModal(this)">
+        <img src="images/mg sc.png" alt="Microsoft Security" onclick="openModal(this)">
+        <img src="images/mg sch.png" alt="Microsoft Scheduler" onclick="openModal(this)">
+        
+        <img src="images/canva cre.png" alt="Canva Creator" onclick="openModal(this)">
+        <img src="images/canva gr.png" alt="Canva Graphics" onclick="openModal(this)">
+        <img src="images/canva fu.jpeg" alt="Canva Fundamentals" onclick="openModal(this)">
+        <img src="images/canva hu.jpeg" alt="Canva Hub" onclick="openModal(this)">
+        
+        <img src="images/sas data.png" alt="SAS Data" onclick="openModal(this)">
+        <img src="images/sas sql.png" alt="SAS SQL" onclick="openModal(this)">
+        
+        <img src="images/introduction_to_cip.png" alt="Introduction to CIP" onclick="openModal(this)">
+        
+        <img src="images/Screenshot_22-10-2025_153738_.jpeg" onclick="openModal(this)">
+        <img src="images/Screenshot_22-10-2025_15383_.jpeg" onclick="openModal(this)">
+        <img src="images/Screenshot_22-10-2025_15406_.jpeg" onclick="openModal(this)">
+        
+        <img src="images/M (1).jpeg" onclick="openModal(this)">
+        <img src="images/M (2).jpeg" onclick="openModal(this)">
+        <img src="images/M (3).jpeg" onclick="openModal(this)">
+        <img src="images/M (4).jpeg" onclick="openModal(this)">
+        <img src="images/M (5).jpeg" onclick="openModal(this)">
+        <img src="images/M (6).jpeg" onclick="openModal(this)">
+        <img src="images/M (7).jpeg" onclick="openModal(this)">
+        <img src="images/M (8).jpeg" onclick="openModal(this)">
+        <img src="images/M (9).jpeg" onclick="openModal(this)">
+        <img src="images/M (10).jpeg" onclick="openModal(this)">
+        <img src="images/M (11).jpeg" onclick="openModal(this)">
+        <img src="images/M (12).jpeg" onclick="openModal(this)">
+        <img src="images/M (13).jpeg" onclick="openModal(this)">
+        <img src="images/M (14).jpeg" onclick="openModal(this)">
+        <img src="images/M (15).jpeg" onclick="openModal(this)">
+        <img src="images/M (16).jpeg" onclick="openModal(this)">
+        <img src="images/M (17).jpeg" onclick="openModal(this)">
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects" class="section glass reveal">
+    <div class="container">
+      <h3 class="section-title">Projects</h3>
+      <ul class="project-list">
+        <li>Invoice Automation Workflows – Automated generation, distribution, and tracking of invoices with Power Automate, VBA, and Dataverse.</li>
+        <li>Predictive Cyber Threat Analytics – Built ML pipelines, anomaly detection metrics, and security dashboards.</li>
+        <li>Microsoft Developer Systems Modernization – SharePoint migration, Databricks notebook automation, Power Apps/Power BI integration.</li>
+        <li>Kubernetes Deployment Pipelines – CI/CD deployment strategies for scalable microservices.</li>
+        <li>Drone Defense System (Hackathon) – Developed defense logic & automation modules for detection and rapid response.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <h3 class="section-title">Profiles</h3>
+
+      <div class="profile-grid">
+
+        <div class="profile-card">
+          <img src="icons/github.png" alt="GitHub" class="profile-icon">
+          <h4>GitHub</h4>
+          <p>Projects, automation, DevOps labs</p>
+          <a class="profile-btn" href="https://github.com/uni85" target="_blank" rel="noopener noreferrer">Visit Profile</a>
+        </div>
+
+        <div class="profile-card">
+          <img src="icons/google.png" alt="Google Cloud" class="profile-icon">
+          <h4>Google Cloud</h4>
+          <p>Skill badges & cloud labs</p>
+          <a class="profile-btn" href="https://www.cloudskillsboost.google/public_profiles/88b281b4-e7e0-4dca-8679-94fa4069471c" target="_blank" rel="noopener noreferrer">View Achievements</a>
+        </div>
+
+        <div class="profile-card">
+          <img src="icons/credly.png" alt="Credly" class="profile-icon">
+          <h4>Credly</h4>
+          <p>Official certifications</p>
+          <a class="profile-btn" href="https://www.credly.com/users/younes-sogandi" target="_blank" rel="noopener noreferrer">Open Profile</a>
+        </div>
+
+        <div class="profile-card">
+          <img src="icons/databricks.png" alt="Databricks" class="profile-icon">
+          <h4>Databricks</h4>
+          <p>Lakehouse badges & SQL labs</p>
+          <a class="profile-btn" href="https://credentials.databricks.com/profile/younessogandi209032/wallet" target="_blank" rel="noopener noreferrer">View Badges</a>
+        </div>
+
+        <div class="profile-card">
+          <img src="icons/linux-foundation.png" alt="Linux Foundation" class="profile-icon">
+          <h4>Linux Foundation</h4>
+          <p>Open-source contributions</p>
+          <a class="profile-btn" href="https://openprofile.dev/profile/younx" target="_blank" rel="noopener noreferrer">Explore Profile</a>
+        </div>
+
+        <div class="profile-card">
+          <img src="icons/microsoft.png" alt="Microsoft Learn" class="profile-icon">
+          <h4>Microsoft Learn</h4>
+          <p>Azure learning paths & labs</p>
+          <a class="profile-btn" href="https://learn.microsoft.com/en-us/users/YSogandi-6344" target="_blank" rel="noopener noreferrer">View Learning</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer"></footer>
+
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
 
 </body>
 </html>
