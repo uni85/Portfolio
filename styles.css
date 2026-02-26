@@ -1,36 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Instrument+Serif:ital@0;1&display=swap');
-
 /* -------------------------
    COLOR SYSTEM
 ------------------------- */
 :root {
   --primary:#6BE6D1;
   --secondary:#5C9188;
-
   --text:#F5F5F5;
   --subtext:#A08980;
-
   --bg:#323C3A;
   --surface:#121217;
-
   --glass-bg:rgba(255,255,255,0.06);
   --border:rgba(255,255,255,0.10);
-
   --accent-orange:#E67245;
   --accent-brown:#A6705B;
+  
+  /* Light Mode Variables */
+  --light-bg: #f0f2f5;
+  --light-text: #1a1b26;
 }
 
 /* -------------------------
-   RESET
+   RESET & BASE
 ------------------------- */
 * { margin:0; padding:0; box-sizing:border-box; }
-html, body { height:100%; }
+html { scroll-behavior: smooth; }
 body {
   font-family:"Poppins", sans-serif;
   color:var(--text);
   background: linear-gradient(135deg, #0f0f10, #1a1b26);
   overflow-x:hidden;
   line-height:1.7;
+}
+
+/* CSS-Only Dark/Light Toggle Logic */
+#mode-checkbox { display: none; }
+#mode-checkbox:checked ~ .site-wrapper {
+  --text: var(--light-text);
+  background: var(--light-bg);
+  filter: invert(0.05); /* Quick shift for light mode */
 }
 
 /* -------------------------
@@ -59,7 +65,6 @@ body::after {
   100% { transform:translate3d(2%,1%,0) scale(1.05); }
 }
 
-/* Grain overlay */
 .grain {
   position:fixed;
   inset:0;
@@ -67,11 +72,7 @@ body::after {
   pointer-events:none;
   opacity:.08;
   mix-blend-mode:soft-light;
-  background-image:url("data:image/svg+xml;utf8,\
-   <svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'>\
-   <filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter>\
-   <rect width='100%' height='100%' filter='url(%23noise)' opacity='0.5'/>\
-   </svg>");
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23noise)' opacity='0.5'/></svg>");
 }
 
 /* -------------------------
@@ -102,8 +103,7 @@ body::after {
   color: var(--secondary);
 }
 
-.logo,
-.hero-title {
+.logo, .hero-title {
   font-family:"Instrument Serif", serif;
 }
 
@@ -143,19 +143,14 @@ body::after {
   transition:.3s;
 }
 .site-nav a:hover::after { width:100%; }
-.mode-toggle {
+
+.mode-label {
   margin-left:14px;
-  background:transparent;
   border:1px solid var(--border);
   padding:6px 10px;
   border-radius:12px;
-  color:var(--text);
   cursor:pointer;
-  transition:.2s;
-}
-.mode-toggle:hover {
-  background:var(--glass-bg);
-  transform:translateY(-1px);
+  display: inline-block;
 }
 
 /* -------------------------
@@ -165,7 +160,7 @@ body::after {
   position:relative;
   text-align:center;
   padding:120px 20px 140px;
-  background:
+  background: 
     radial-gradient(60% 60% at 50% 20%, rgba(255,255,255,.1), transparent 60%),
     linear-gradient(135deg, #6BE6D1 0%, #E67245 100%);
   background-size:300% 300%;
@@ -173,7 +168,6 @@ body::after {
   border-bottom-left-radius:40px;
   border-bottom-right-radius:40px;
   overflow:hidden;
-  isolation:isolate;
 }
 @keyframes gradientMove {
   0% {background-position:0% 50%;}
@@ -197,6 +191,7 @@ body::after {
   text-decoration:none;
   font-weight:600;
   transition:.3s;
+  display:inline-block;
 }
 .btn-primary {
   background:var(--bg);
@@ -208,9 +203,9 @@ body::after {
 }
 
 /* -------------------------
-   CARDS
+   CARDS & PROFILE
 ------------------------- */
-.card {
+.card, .profile-card {
   background: var(--glass-bg);
   padding: 18px 22px;
   margin-bottom: 20px;
@@ -218,55 +213,18 @@ body::after {
   border: 1px solid var(--border);
   transition: 0.3s;
 }
-.card:hover {
-  transform:translateY(-4px) rotate3d(.5,.5,0,0.6deg);
-  border-color:rgba(255,255,255,0.18);
-  box-shadow:0 12px 38px rgba(0,0,0,0.28);
-}
-.date {
-  display:block;
-  margin-top:6px;
-  font-size:14px;
-  color:var(--subtext);
-}
-
-/* -------------------------
-   PROFILE CARDS
-------------------------- */
-.profile-grid {
-  display:grid;
-  grid-template-columns:1fr;
-  gap:20px;
-}
-.profile-card {
-  background:var(--glass-bg);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:22px;
-  text-align:center;
-  transition: 0.25s ease;
-}
-.profile-card:hover {
+.card:hover, .profile-card:hover {
   transform:translateY(-4px);
   border-color:var(--primary);
-  box-shadow:0 8px 26px rgba(0,0,0,0.25);
+  box-shadow:0 12px 38px rgba(0,0,0,0.28);
 }
-.profile-icon {
-  width:36px;
-  height:36px;
-  opacity:.9;
-  margin-bottom:12px;
+.profile-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:20px;
 }
-.profile-card p {
-  font-size: 14px;
-  color: var(--subtext);
-  margin-bottom: 16px;
-}
-.profile-card h4 {
-  margin-bottom:6px;
-  color:var(--primary);
-  font-weight:700;
-}
+.date { font-size:14px; color:var(--subtext); display:block; margin-top:6px; }
+.profile-icon { width:36px; height:36px; margin-bottom:12px; }
 .profile-btn {
   background:var(--primary);
   color:#000;
@@ -275,127 +233,84 @@ body::after {
   text-decoration:none;
   font-weight:550;
   display: inline-block;
-  transition: 0.2s ease;
-}
-.profile-btn:hover {
-  background:var(--secondary);
-  color:#fff;
+  margin-top: 10px;
 }
 
 /* -------------------------
-   EMOJI ROW
-------------------------- */
-.emoji-row {
-  font-size:26px;
-  letter-spacing:6px;
-  margin:4px 0 10px;
-  filter:drop-shadow(0 5px 10px rgba(0,0,0,0.25));
-}
-
-/* -------------------------
-   SCROLL REVEAL
+   REVEAL ANIMATIONS (CSS Only)
 ------------------------- */
 .reveal {
-  opacity:0;
-  transform:translateY(20px) scale(.97);
-  transition:opacity .7s ease, transform .7s ease;
+  animation: revealAnim linear forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
 }
-.reveal.visible {
-  opacity:1;
-  transform:translateY(0) scale(1);
-}
-
-/* -------------------------
-   FOOTER
-------------------------- */
-.site-footer {
-  text-align:center;
-  padding:25px;
-  color:var(--subtext);
-  opacity:.7;
+@keyframes revealAnim {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 /* -------------------------
-   BADGE GALLERY & MODAL
+   BADGE GALLERY & MODAL (CSS Checkbox Hack)
 ------------------------- */
-
-/* Badge Gallery Grid */
 .badge-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 15px;
-  margin-top: 30px;
-  justify-items: center;
 }
 
-.badge-gallery img {
+/* Modal Styling */
+.modal-check { display: none; }
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* Close button - labels back to nowhere */
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* Show modal when checkbox is checked */
+.modal-check:checked + .modal-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-img {
+  max-width: 90%;
+  max-height: 80vh;
+  transform: scale(0.8);
+  transition: transform 0.4s ease;
+}
+.modal-check:checked + .modal-overlay .modal-img {
+  transform: scale(1);
+}
+
+.badge-gallery label img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
-  object-fit: contain;
-  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: transform 0.3s;
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  padding: 5px;
 }
+.badge-gallery label img:hover { transform: scale(1.05); }
 
-.badge-gallery img:hover {
-  transform: scale(1.05);
-  border-color: var(--primary);
-  z-index: 10;
-}
-
-/* Modal (Background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; 
-  z-index: 2000; /* Sit on top of everything */
-  padding-top: 50px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.9); 
-  backdrop-filter: blur(5px);
-}
-
-/* Modal Content (Image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 800px;
-  max-height: 80vh;
-  object-fit: contain;
-  animation-name: zoom;
-  animation-duration: 0.4s;
-}
-
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
-  z-index: 2001;
-}
-
-.close:hover,
-.close:focus {
-  color: var(--primary);
-  text-decoration: none;
-  cursor: pointer;
-}
+/* -------------------------
+   FOOTER
+------------------------- */
+.site-footer { text-align:center; padding:25px; color:var(--subtext); }
