@@ -12,10 +12,15 @@
   --border:rgba(255,255,255,0.10);
   --accent-orange:#E67245;
   --accent-brown:#A6705B;
-  
-  /* Light Mode Variables */
+
   --light-bg: #f0f2f5;
   --light-text: #1a1b26;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: var(--light-text);
+  }
 }
 
 /* -------------------------
@@ -29,14 +34,6 @@ body {
   background: linear-gradient(135deg, #0f0f10, #1a1b26);
   overflow-x:hidden;
   line-height:1.7;
-}
-
-/* CSS-Only Dark/Light Toggle Logic */
-#mode-checkbox { display: none; }
-#mode-checkbox:checked ~ .site-wrapper {
-  --text: var(--light-text);
-  background: var(--light-bg);
-  filter: invert(0.05); /* Quick shift for light mode */
 }
 
 /* -------------------------
@@ -117,6 +114,11 @@ body::after {
   padding:15px 0;
   backdrop-filter:blur(10px);
 }
+.header-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 .logo {
   font-size:1.8rem;
   font-weight:800;
@@ -144,15 +146,6 @@ body::after {
 }
 .site-nav a:hover::after { width:100%; }
 
-.mode-label {
-  margin-left:14px;
-  border:1px solid var(--border);
-  padding:6px 10px;
-  border-radius:12px;
-  cursor:pointer;
-  display: inline-block;
-}
-
 /* -------------------------
    HERO
 ------------------------- */
@@ -160,7 +153,7 @@ body::after {
   position:relative;
   text-align:center;
   padding:120px 20px 140px;
-  background: 
+  background:
     radial-gradient(60% 60% at 50% 20%, rgba(255,255,255,.1), transparent 60%),
     linear-gradient(135deg, #6BE6D1 0%, #E67245 100%);
   background-size:300% 300%;
@@ -237,15 +230,17 @@ body::after {
 }
 
 /* -------------------------
-   REVEAL ANIMATIONS (CSS Only)
+   REVEAL ANIMATIONS (CSS Scroll-driven)
 ------------------------- */
+/* Requires modern browsers that support animation-timeline + view() [web:1] */
 .reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
   animation: revealAnim linear forwards;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
 }
 @keyframes revealAnim {
-  from { opacity: 0; transform: translateY(40px) scale(0.95); }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
@@ -258,8 +253,23 @@ body::after {
   gap: 15px;
 }
 
-/* Modal Styling */
-.modal-check { display: none; }
+/* Hide all modal checkboxes */
+.modal-check {
+  display:none;
+}
+
+/* Thumbnail label */
+.badge-label img {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 5px;
+}
+.badge-label img:hover { transform: scale(1.05); }
+
+/* Overlay (initially hidden) [web:2][web:5] */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -274,7 +284,12 @@ body::after {
   transition: opacity 0.4s ease;
 }
 
-/* Close button - labels back to nowhere */
+/* When checkbox is checked, show its sibling modal overlay */
+.modal-check:checked + .badge-label + .modal-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .modal-close {
   position: absolute;
   top: 30px;
@@ -283,34 +298,33 @@ body::after {
   font-size: 40px;
   cursor: pointer;
 }
-
-/* Show modal when checkbox is checked */
-.modal-check:checked + .modal-overlay {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .modal-img {
   max-width: 90%;
   max-height: 80vh;
   transform: scale(0.8);
   transition: transform 0.4s ease;
 }
-.modal-check:checked + .modal-overlay .modal-img {
+.modal-check:checked + .badge-label + .modal-overlay .modal-img {
   transform: scale(1);
 }
-
-.badge-gallery label img {
-  width: 100%;
-  cursor: pointer;
-  transition: transform 0.3s;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 5px;
-}
-.badge-gallery label img:hover { transform: scale(1.05); }
 
 /* -------------------------
    FOOTER
 ------------------------- */
-.site-footer { text-align:center; padding:25px; color:var(--subtext); }
+.site-footer {
+  text-align:center;
+  padding:25px;
+  color:var(--subtext);
+}
+
+/* -------------------------
+   RESPONSIVE
+------------------------- */
+@media (max-width: 768px) {
+  .site-nav {
+    display:none;
+  }
+  .header-inner {
+    justify-content:center;
+  }
+}
