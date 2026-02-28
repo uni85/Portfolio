@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <input type="checkbox" id="theme-toggle" hidden>
 
   <div class="grain" aria-hidden="true"></div>
 
@@ -20,6 +21,7 @@
         <a href="#certificates">Certificates</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Profiles</a>
+        <label for="theme-toggle" class="mode-toggle" tabindex="0">🌗 Theme</label>
       </nav>
     </div>
   </header>
@@ -80,8 +82,8 @@
       <div class="card">
         <h4>Tehran Institute of Technology</h4>
         <p><strong>Certificates:</strong></p>
-		<p>Web Design (HTML5, CSS3, PHP, Bootstrap)</p>
-		<p> Network+ (CompTIA)</p>
+        <p>Web Design (HTML5, CSS3, PHP, Bootstrap)</p>
+        <p> Network+ (CompTIA)</p>
         <span class="date">Jan 2020 – Jul 2021</span>
       </div>
     </div>
@@ -135,88 +137,88 @@
       </ul>
 
       <div class="badge-gallery">
-        <img src="images/AWS cloud prac.png" alt="AWS Cloud Practitioner" onclick="openModal(this)">
-        <img src="images/AWS cloud.png" alt="AWS Cloud" onclick="openModal(this)">
-        <img src="images/AWS arch.png" alt="AWS Architecture" onclick="openModal(this)">
-        <img src="images/AWS eks.png" alt="AWS EKS" onclick="openModal(this)">
-        <img src="images/AWS ML.png" alt="AWS Machine Learning" onclick="openModal(this)">
-        <img src="images/aw clo.png" alt="AWS Cloud Overview" onclick="openModal(this)">
-        
-        <img src="images/Cisco PT.png" alt="Cisco Packet Tracer" onclick="openModal(this)">
-        <img src="images/Cisco sec.png" alt="Cisco Security" onclick="openModal(this)">
-        
-        <img src="images/FortiCy.png" alt="Fortinet Cybersecurity" onclick="openModal(this)">
-        <img src="images/forti1.png" alt="Fortinet Badge" onclick="openModal(this)">
-        <img src="images/fortiland.png" alt="Fortinet Fundamentals" onclick="openModal(this)">
-        <img src="images/nse.png" alt="Fortinet NSE" onclick="openModal(this)">
-        <img src="images/nse 1.png" alt="Fortinet NSE 1" onclick="openModal(this)">
-        <img src="images/nse 2.png" alt="Fortinet NSE 2" onclick="openModal(this)">
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/AWS cloud prac.png" alt="AWS Cloud Practitioner"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/AWS cloud.png" alt="AWS Cloud"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/AWS arch.png" alt="AWS Architecture"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/AWS eks.png" alt="AWS EKS"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/AWS ML.png" alt="AWS Machine Learning"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/aw clo.png" alt="AWS Cloud Overview"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
 
-        <img src="images/NeoFJ.png" alt="Neo4j certified" onclick="openModal(this)">
-        
-        <img src="images/G GCP.png" alt="Google Cloud Platform" onclick="openModal(this)">
-        <img src="images/G Big query.png" alt="Google BigQuery" onclick="openModal(this)">
-        <img src="images/G GenAI.png" alt="Google Generative AI" onclick="openModal(this)">
-        <img src="images/G LLM.png" alt="Google Large Language Models" onclick="openModal(this)">
-        <img src="images/G sheets.png" alt="Google Sheets" onclick="openModal(this)">
-        <img src="images/G Vertex Flutter.png" alt="Vertex AI Flutter" onclick="openModal(this)">
-        <img src="images/G Vertex streamlit.png" alt="Vertex AI Streamlit" onclick="openModal(this)">
-        
-        <img src="images/db gcp.png" alt="Databricks GCP" onclick="openModal(this)">
-        <img src="images/db de-Photoroom.png" alt="Databricks Data Engineering" onclick="openModal(this)">
-        <img src="images/db ml-Photoroom.png" alt="Databricks Machine Learning" onclick="openModal(this)">
-        <img src="images/db spark.png" alt="Apache Spark" onclick="openModal(this)">
-        
-        <img src="images/IBM ux.png" alt="IBM UX Design" onclick="openModal(this)">
-        <img src="images/bm ai.png" alt="IBM AI" onclick="openModal(this)">
-        <img src="images/bm cy.png" alt="IBM Cybersecurity" onclick="openModal(this)">
-        <img src="images/bm ux.png" alt="IBM UX" onclick="openModal(this)">
-        
-        <img src="images/LFC 108.png" alt="Linux Foundation LFC108" onclick="openModal(this)">
-        <img src="images/LFD104.png" alt="Linux Foundation LFD104" onclick="openModal(this)">
-        <img src="images/LFEL1001.png" alt="LFEL1001" onclick="openModal(this)">
-        <img src="images/LFEL1005.png" alt="LFEL1005" onclick="openModal(this)">
-        <img src="images/LFEL1006.png" alt="LFEL1006" onclick="openModal(this)">
-        <img src="images/LFEL1007.png" alt="LFEL1007" onclick="openModal(this)">
-        <img src="images/LFEL1012.png" alt="LFEL1012" onclick="openModal(this)">
-        <img src="images/LFS116.png" alt="LFS116" onclick="openModal(this)">
-        
-        <img src="images/mg ad sch.png" alt="Microsoft AD Scheduler" onclick="openModal(this)">
-        <img src="images/mg enc.png" alt="Microsoft Encryption" onclick="openModal(this)">
-        <img src="images/mg sc.png" alt="Microsoft Security" onclick="openModal(this)">
-        <img src="images/mg sch.png" alt="Microsoft Scheduler" onclick="openModal(this)">
-        
-        <img src="images/canva cre.png" alt="Canva Creator" onclick="openModal(this)">
-        <img src="images/canva gr.png" alt="Canva Graphics" onclick="openModal(this)">
-        <img src="images/canva fu.jpeg" alt="Canva Fundamentals" onclick="openModal(this)">
-        <img src="images/canva hu.jpeg" alt="Canva Hub" onclick="openModal(this)">
-        
-        <img src="images/sas data.png" alt="SAS Data" onclick="openModal(this)">
-        <img src="images/sas sql.png" alt="SAS SQL" onclick="openModal(this)">
-        
-        <img src="images/introduction_to_cip.png" alt="Introduction to CIP" onclick="openModal(this)">
-        
-        <img src="images/Screenshot_22-10-2025_153738_.jpeg" onclick="openModal(this)">
-        <img src="images/Screenshot_22-10-2025_15383_.jpeg" onclick="openModal(this)">
-        <img src="images/Screenshot_22-10-2025_15406_.jpeg" onclick="openModal(this)">
-        
-        <img src="images/M (1).jpeg" onclick="openModal(this)">
-        <img src="images/M (2).jpeg" onclick="openModal(this)">
-        <img src="images/M (3).jpeg" onclick="openModal(this)">
-        <img src="images/M (4).jpeg" onclick="openModal(this)">
-        <img src="images/M (5).jpeg" onclick="openModal(this)">
-        <img src="images/M (6).jpeg" onclick="openModal(this)">
-        <img src="images/M (7).jpeg" onclick="openModal(this)">
-        <img src="images/M (8).jpeg" onclick="openModal(this)">
-        <img src="images/M (9).jpeg" onclick="openModal(this)">
-        <img src="images/M (10).jpeg" onclick="openModal(this)">
-        <img src="images/M (11).jpeg" onclick="openModal(this)">
-        <img src="images/M (12).jpeg" onclick="openModal(this)">
-        <img src="images/M (13).jpeg" onclick="openModal(this)">
-        <img src="images/M (14).jpeg" onclick="openModal(this)">
-        <img src="images/M (15).jpeg" onclick="openModal(this)">
-        <img src="images/M (16).jpeg" onclick="openModal(this)">
-        <img src="images/M (17).jpeg" onclick="openModal(this)">
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/Cisco PT.png" alt="Cisco Packet Tracer"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/Cisco sec.png" alt="Cisco Security"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/FortiCy.png" alt="Fortinet Cybersecurity"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/forti1.png" alt="Fortinet Badge"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/fortiland.png" alt="Fortinet Fundamentals"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/nse.png" alt="Fortinet NSE"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/nse 1.png" alt="Fortinet NSE 1"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/nse 2.png" alt="Fortinet NSE 2"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/NeoFJ.png" alt="Neo4j certified"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/G GCP.png" alt="Google Cloud Platform"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/G Big query.png" alt="Google BigQuery"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/G GenAI.png" alt="Google Generative AI"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/G LLM.png" alt="Google Large Language Models"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/G sheets.png" alt="Google Sheets"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/G Vertex Flutter.png" alt="Vertex AI Flutter"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/G Vertex streamlit.png" alt="Vertex AI Streamlit"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/db gcp.png" alt="Databricks GCP"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/db de-Photoroom.png" alt="Databricks Data Engineering"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/db ml-Photoroom.png" alt="Databricks Machine Learning"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/db spark.png" alt="Apache Spark"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/IBM ux.png" alt="IBM UX Design"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/bm ai.png" alt="IBM AI"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/bm cy.png" alt="IBM Cybersecurity"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/bm ux.png" alt="IBM UX"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/LFC 108.png" alt="Linux Foundation LFC108"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/LFD104.png" alt="Linux Foundation LFD104"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/LFEL1001.png" alt="LFEL1001"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/LFEL1005.png" alt="LFEL1005"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/LFEL1006.png" alt="LFEL1006"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/LFEL1007.png" alt="LFEL1007"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/LFEL1012.png" alt="LFEL1012"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/LFS116.png" alt="LFS116"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/mg ad sch.png" alt="Microsoft AD Scheduler"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/mg enc.png" alt="Microsoft Encryption"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/mg sc.png" alt="Microsoft Security"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/mg sch.png" alt="Microsoft Scheduler"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/canva cre.png" alt="Canva Creator"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/canva gr.png" alt="Canva Graphics"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/canva fu.jpeg" alt="Canva Fundamentals"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/canva hu.jpeg" alt="Canva Hub"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/sas data.png" alt="SAS Data"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/sas sql.png" alt="SAS SQL"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/introduction_to_cip.png" alt="Introduction to CIP"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/Screenshot_22-10-2025_153738_.jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/Screenshot_22-10-2025_15383_.jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/Screenshot_22-10-2025_15406_.jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (1).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (2).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (3).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (4).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (5).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (6).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (7).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (8).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (9).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (10).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (11).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (12).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (13).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (14).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (15).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (16).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
+        <label class="gallery-item"><input type="checkbox" hidden class="lightbox-toggle"><img src="images/M (17).jpeg"><div class="lightbox-overlay"></div><span class="close-btn">&times;</span></label>
       </div>
 
     </div>
@@ -240,7 +242,6 @@
       <h3 class="section-title">Profiles</h3>
 
       <div class="profile-grid">
-
         <div class="profile-card">
           <img src="icons/github.png" alt="GitHub" class="profile-icon">
           <h4>GitHub</h4>
@@ -282,58 +283,10 @@
           <p>Azure learning paths & labs</p>
           <a class="profile-btn" href="https://learn.microsoft.com/en-us/users/YSogandi-6344" target="_blank" rel="noopener noreferrer">View Learning</a>
         </div>
-
       </div>
     </div>
   </section>
 
   <footer class="site-footer"></footer>
-
-  <div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg">
-  </div>
-
-  <script>
-    const root = document.documentElement;
-    const saved = localStorage.getItem('scheme');
-    if (saved === 'light') root.classList.add('light');
-
-    document.querySelector('.mode-toggle')?.addEventListener('click', () => {
-      root.classList.toggle('light');
-      localStorage.setItem('scheme', root.classList.contains('light') ? 'light' : 'dark');
-    });
-
-    const ro = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          ro.unobserve(e.target);
-        }
-      });
-    }, { rootMargin: "0px 0px -5% 0px", threshold: 0.08 });
-
-    document.querySelectorAll('.section, .card, .profile-card, .hero').forEach(el => {
-      el.classList.add('reveal');
-      ro.observe(el);
-    });
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.querySelectorAll('.reveal').forEach(el => el.style.transition = 'none');
-    }
-
-    /* --- MODAL LOGIC --- */
-    function openModal(element) {
-        var modal = document.getElementById("imageModal");
-        var modalImg = document.getElementById("modalImg");
-        modal.style.display = "block";
-        modalImg.src = element.src;
-    }
-
-    function closeModal() {
-        document.getElementById("imageModal").style.display = "none";
-    }
-  </script>
-
 </body>
 </html>
