@@ -460,52 +460,62 @@ body::after {
   color: var(--primary);
 }
 
-/* Quest Section Styles */
-.quest-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
+/* Quest Card Layout Enhancement */
 .quest-card {
+  display: flex; /* This puts info and badge side-by-side */
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   background: var(--glass-bg);
-  border: 1px dashed var(--border); /* Dashed border gives a 'quest/map' feel */
-  padding: 20px;
-  border-radius: 12px;
-  position: relative;
-  transition: transform 0.3s ease;
+  border: 1px dashed var(--border);
+  padding: 24px;
+  border-radius: 16px;
+  transition: 0.3s ease;
 }
 
-.quest-card:hover {
-  transform: translateY(-5px);
-  border-style: solid;
-  border-color: var(--primary);
+.quest-info {
+  flex: 1; /* Takes up remaining space */
 }
 
+.quest-badge {
+  flex-shrink: 0; /* Prevents image from shrinking */
+  width: 100px;  /* Adjust size as needed */
+  height: 100px;
+}
+
+.quest-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* Responsive fix for small screens (stack them vertically on mobile) */
+@media (max-width: 600px) {
+  .quest-card {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .quest-badge {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Specific Quest Tags */
 .quest-tag {
   display: inline-block;
-  font-size: 10px;
+  font-size: 11px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-weight: 700;
 }
 
-/* Colors for Quest Tags */
-.gen-ai { background: #8e44ad; color: white; }
-.security { background: #c0392b; color: white; }
-.cloud { background: #2980b9; color: white; }
-.microsoft { background: #27ae60; color: white; }
-
-.quest-status {
-  display: block;
-  margin-top: 15px;
-  font-size: 12px;
-  color: var(--primary);
-  font-weight: 600;
-  text-align: right;
-}
+.gen-ai { background: #8e44ad; color: #fff; }
+.security { background: #c0392b; color: #fff; }
 
 @keyframes zoomIn {
   from { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
