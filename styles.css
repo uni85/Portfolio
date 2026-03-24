@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Instrument+Serif:ital@0;1&display=swap');
 
 /* -------------------------
-   COLOR SYSTEM (Default Dark)
+    COLOR SYSTEM (Default Dark)
 ------------------------- */
 :root {
   --primary: #6BE6D1;
@@ -19,7 +19,7 @@
 }
 
 /* -------------------------
-   CSS-ONLY LIGHT MODE (via :has and checkbox)
+    CSS-ONLY LIGHT MODE
 ------------------------- */
 body:has(#theme-toggle:checked) {
   --primary: #007A6B;
@@ -34,7 +34,6 @@ body:has(#theme-toggle:checked) {
   --page-bg-end: #eef1f5;
 }
 
-/* Light mode logo adjustment for better contrast */
 body:has(#theme-toggle:checked) .logo {
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
@@ -42,7 +41,7 @@ body:has(#theme-toggle:checked) .logo {
 }
 
 /* -------------------------
-   RESET
+    RESET
 ------------------------- */
 * { margin:0; padding:0; box-sizing:border-box; }
 html, body { height:100%; scroll-behavior: smooth; }
@@ -55,7 +54,7 @@ body {
 }
 
 /* -------------------------
-   AMBIENT BLOBS + GRAIN
+    AMBIENT BLOBS + GRAIN
 ------------------------- */
 body::before, body::after {
   content:"";
@@ -80,7 +79,6 @@ body::after {
   100% { transform:translate3d(2%,1%,0) scale(1.05); }
 }
 
-/* Grain overlay */
 .grain {
   position:fixed;
   inset:0;
@@ -89,14 +87,14 @@ body::after {
   opacity:.08;
   mix-blend-mode:soft-light;
   background-image:url("data:image/svg+xml;utf8,\
-   <svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'>\
-   <filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter>\
-   <rect width='100%' height='100%' filter='url(%23noise)' opacity='0.5'/>\
-   </svg>");
+    <svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'>\
+    <filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter>\
+    <rect width='100%' height='100%' filter='url(%23noise)' opacity='0.5'/>\
+    </svg>");
 }
 
 /* -------------------------
-   LAYOUT HELPERS
+    LAYOUT HELPERS
 ------------------------- */
 .container {
   width:85%;
@@ -114,7 +112,7 @@ body::after {
 }
 
 /* -------------------------
-   TYPOGRAPHY
+    TYPOGRAPHY
 ------------------------- */
 .section-title {
   font-size: 30px;
@@ -129,7 +127,7 @@ body::after {
 }
 
 /* -------------------------
-   HEADER
+    HEADER
 ------------------------- */
 .site-header {
   position:sticky;
@@ -165,7 +163,6 @@ body::after {
 }
 .site-nav a:hover::after { width:100%; }
 
-/* Changed to Label for Checkbox Hack */
 .mode-toggle {
   display: inline-block;
   margin-left:14px;
@@ -184,7 +181,7 @@ body::after {
 }
 
 /* -------------------------
-   HERO
+    HERO
 ------------------------- */
 .hero {
   position:relative;
@@ -210,7 +207,7 @@ body::after {
   font-weight:800;
   margin-bottom:10px;
   text-shadow:0 8px 30px rgba(0,0,0,0.25);
-  color: #fff; /* Ensuring visibility independent of theme */
+  color: #fff;
 }
 .hero-subtitle {
   font-size:1.2rem;
@@ -235,7 +232,7 @@ body::after {
 }
 
 /* -------------------------
-   CARDS
+    CARDS
 ------------------------- */
 .card {
   background: var(--glass-bg);
@@ -258,7 +255,7 @@ body::after {
 }
 
 /* -------------------------
-   PROFILE CARDS
+    PROFILE CARDS
 ------------------------- */
 .profile-grid {
   display:grid;
@@ -316,7 +313,7 @@ body::after {
 }
 
 /* -------------------------
-   EMOJI ROW
+    EMOJI ROW
 ------------------------- */
 .emoji-row {
   font-size:26px;
@@ -326,9 +323,8 @@ body::after {
 }
 
 /* -------------------------
-   SCROLL REVEAL (CSS-Only)
+    SCROLL REVEAL (CSS-Only)
 ------------------------- */
-/* Default static fallback if feature isn't supported */
 .reveal {
   opacity: 1;
   transform: none;
@@ -353,7 +349,7 @@ body::after {
 }
 
 /* -------------------------
-   FOOTER
+    FOOTER
 ------------------------- */
 .site-footer {
   text-align:center;
@@ -363,12 +359,11 @@ body::after {
 }
 
 /* -------------------------
-   BADGE GALLERY & PURE CSS MODAL
+    BADGE GALLERY (REFINED TO 7 PER ROW)
 ------------------------- */
-
 .badge-gallery {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr); /* FIX: 7 in a row */
   gap: 15px;
   margin-top: 30px;
   justify-items: center;
@@ -399,14 +394,9 @@ body::after {
 }
 
 /* CSS Checkbox Hack for Lightbox Modal */
-.lightbox-overlay {
-  display: none;
-}
-.close-btn {
-  display: none;
-}
+.lightbox-overlay { display: none; }
+.close-btn { display: none; }
 
-/* When clicking the image, it checks the hidden input */
 .lightbox-toggle:checked ~ img {
   position: fixed;
   top: 50%;
@@ -417,21 +407,12 @@ body::after {
   height: auto;
   max-width: 90vw;
   max-height: 90vh;
-  aspect-ratio: auto;
   background: transparent;
   border: none;
-  padding: 0;
-  border-radius: 0;
   cursor: zoom-out;
   animation: zoomIn 0.3s ease forwards;
 }
 
-.lightbox-toggle:checked ~ img:hover {
-  transform: translate(-50%, -50%);
-  border-color: transparent;
-}
-
-/* Overlay Background */
 .lightbox-toggle:checked ~ .lightbox-overlay {
   display: block;
   position: fixed;
@@ -439,10 +420,8 @@ body::after {
   background: rgba(0,0,0,0.85);
   backdrop-filter: blur(5px);
   z-index: 2000;
-  cursor: zoom-out;
 }
 
-/* Close Button (top right) */
 .lightbox-toggle:checked ~ .close-btn {
   display: block;
   position: fixed;
@@ -453,148 +432,94 @@ body::after {
   font-weight: bold;
   z-index: 2003;
   cursor: pointer;
-  transition: color 0.3s;
 }
 
-.lightbox-toggle:checked ~ .close-btn:hover {
-  color: var(--primary);
-}
-
-/* Quest Card Layout Enhancement */
+/* -------------------------
+    QUEST CARDS (IMAGE ON RIGHT)
+------------------------- */
 .quest-card {
- display: flex;
- flex-direction: row; /* Ensure horizontal layout */
- align-items: flex-start; /* Align text to top */
- justify-content: space-between;
- gap: 15px;
+  display: flex;
+  flex-direction: row; /* FIX: Restored horizontal layout */
+  align-items: center; /* Vertical center alignment */
+  justify-content: space-between;
+  gap: 20px;
   background: var(--glass-bg);
-  padding: 30px; /* More padding for a premium feel */
+  padding: 30px;
   border-radius: 8px;
   border: 1px dashed var(--border);
   margin-bottom: 20px;
 }
 
 .quest-info {
-  flex: 2; /* Takes up remaining space */
+  flex: 2; /* Takes up space on the left */
 }
 
 .quest-badge {
-  flex: 1; 
+  flex: 0 0 140px; /* FIX: Fixed width on the right */
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 140px; /* Increased from 80px */
 }
 
 .quest-badge img {
-  width: 140px; /* Bigger presence */
+  width: 140px; 
   height: 140px;
   object-fit: contain;
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); /* Adds depth */
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
 }
 
 .quest-badge img:hover {
-  transform: scale(1.15) rotate(3deg); /* "Be Water" fluid movement */
+  transform: scale(1.15) rotate(3deg);
 }
 
-/* Lightbox fix: Make sure when clicked it fills the screen properly */
-.lightbox-toggle:checked ~ img {
-  width: auto;
-  height: auto;
-  max-width: 80vw;
-  max-height: 70vh;
+@media (max-width: 768px) {
+  .badge-gallery { grid-template-columns: repeat(4, 1fr); }
+  .quest-card { flex-direction: column-reverse; text-align: center; }
+  .quest-badge { width: 120px; height: 120px; margin: 0 auto 15px; }
 }
 
-/* Responsive fix for small screens (stack them vertically on mobile) */
-@media (max-width: 600px) {
-  .quest-card {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-  .quest-badge {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-/* Specific Quest Tags */
+/* -------------------------
+    QUEST TAGS & STATUS (WES ANDERSON STYLE)
+------------------------- */
 .quest-tag {
   display: inline-block;
   font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 4px 10px;
-  border-radius: 6px;
+  border-radius: 4px !important;
   margin-bottom: 12px;
   font-weight: 700;
-  box-shadow: 4px 4px 0px rgba(0,0,0,0.1); /* Hard retro shadow */
-border-radius: 4px !important; /* Wes loves sharp/slight corners over round ones */
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
-/* THE PRESTIGE STATUS STYLE */
+
 .quest-status {
-    display: block;
-    margin-top: 18px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border); /* Subtle separation line */
-    
-    /* Typography */
-    font-family: "Instrument Serif", serif;
-    font-style: italic;
-    font-size: 1.05rem;
-    color: var(--primary); /* Your Mint/Cyan color */
-    
-    /* Elegant Spacing */
-    letter-spacing: 0.5px;
-    line-height: 1.4;
-    
-    /* Subtle Glow for "Bigginness" */
-    text-shadow: 0 0 15px rgba(107, 230, 209, 0.3);
+  display: block;
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  text-shadow: 0 0 15px rgba(107, 230, 209, 0.3);
 }
 
-/* Optional: Add a small symbol before the text for a "Zen" touch */
 .quest-status::before {
-    content: "◈ ";
-    font-style: normal;
-    margin-right: 5px;
-    opacity: 0.7;
-}
-/* Wes Anderson - The Darjeeling Limited Palette */
-
-.gen-ai { 
-    background: #E8A838; /* Saffron/Mustard Yellow (The Suitcases) */
-    color: #323C3A; 
-    border: 1px solid #C48A28;
-    font-family: "Instrument Serif", serif; /* Analog feel */
+  content: "◈ ";
+  font-style: normal;
+  margin-right: 5px;
+  opacity: 0.7;
 }
 
-.security { 
-    background: #3B7A87; /* Deep Sea Teal (The Train Walls) */
-    color: #F5F5F5; 
-    border: 1px solid #2D5F69;
-    font-family: "Instrument Serif", serif;
-}
-
-.cloud { 
-    background: #9D3D28; /* Terracotta Red (Vintage travel vibes) */
-    color: #F5F5F5; 
-    border: 1px solid #7A2F1F;
-    font-family: "Instrument Serif", serif;
-}
-
-.microsoft { 
-    background: #D4AF9A; /* Dusty Rose/Nude (Desert backdrop) */
-    color: #323C3A; 
-    border: 1px solid #B08E7A;
-    font-family: "Instrument Serif", serif;
-}
-
-.gameday { 
-    background: #2B4562; /* Deep Train Blue */
-    color: #F5F5F5; 
-    border: 1px solid #E8A838; /* Saffron border for that luxury feel */
-    font-family: "Instrument Serif", serif;
-}
+.gen-ai { background: #E8A838; color: #323C3A; border: 1px solid #C48A28; font-family: "Instrument Serif", serif; }
+.security { background: #3B7A87; color: #F5F5F5; border: 1px solid #2D5F69; font-family: "Instrument Serif", serif; }
+.cloud { background: #9D3D28; color: #F5F5F5; border: 1px solid #7A2F1F; font-family: "Instrument Serif", serif; }
+.microsoft { background: #D4AF9A; color: #323C3A; border: 1px solid #B08E7A; font-family: "Instrument Serif", serif; }
+.gameday { background: #2B4562; color: #F5F5F5; border: 1px solid #E8A838; font-family: "Instrument Serif", serif; }
 
 @keyframes zoomIn {
   from { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
