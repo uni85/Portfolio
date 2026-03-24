@@ -512,10 +512,39 @@ body::after {
   border-radius: 6px;
   margin-bottom: 12px;
   font-weight: 700;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.1); /* Hard retro shadow */
+border-radius: 4px !important; /* Wes loves sharp/slight corners over round ones */
 }
 
-.gen-ai { background: #8e44ad; color: #fff; }
-.security { background: #c0392b; color: #fff; }
+/* Wes Anderson - The Darjeeling Limited Palette */
+
+.gen-ai { 
+    background: #E8A838; /* Saffron/Mustard Yellow (The Suitcases) */
+    color: #323C3A; 
+    border: 1px solid #C48A28;
+    font-family: "Instrument Serif", serif; /* Analog feel */
+}
+
+.security { 
+    background: #3B7A87; /* Deep Sea Teal (The Train Walls) */
+    color: #F5F5F5; 
+    border: 1px solid #2D5F69;
+    font-family: "Instrument Serif", serif;
+}
+
+.cloud { 
+    background: #9D3D28; /* Terracotta Red (Vintage travel vibes) */
+    color: #F5F5F5; 
+    border: 1px solid #7A2F1F;
+    font-family: "Instrument Serif", serif;
+}
+
+.microsoft { 
+    background: #D4AF9A; /* Dusty Rose/Nude (Desert backdrop) */
+    color: #323C3A; 
+    border: 1px solid #B08E7A;
+    font-family: "Instrument Serif", serif;
+}
 
 @keyframes zoomIn {
   from { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
