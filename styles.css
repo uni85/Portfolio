@@ -546,6 +546,13 @@ border-radius: 4px !important; /* Wes loves sharp/slight corners over round ones
     font-family: "Instrument Serif", serif;
 }
 
+.aws-gameday { 
+    background: #2B4562; /* Deep Train Blue */
+    color: #F5F5F5; 
+    border: 1px solid #E8A838; /* Saffron border for that luxury feel */
+    font-family: "Instrument Serif", serif;
+}
+
 @keyframes zoomIn {
   from { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
   to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
