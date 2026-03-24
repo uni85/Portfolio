@@ -387,7 +387,7 @@ body::after {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
