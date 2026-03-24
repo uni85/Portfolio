@@ -503,23 +503,58 @@ body::after {
 }
 
 /* Specific Quest Tags */
+/* --- THE TAGS (SPANS) --- */
 .quest-tag {
-    display: inline-block;
+    display: inline-block; /* Essential for padding/margin to work */
     font-size: 11px;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     padding: 5px 12px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-weight: 700;
-    border-radius: 4px !important;
+    border-radius: 4px;
     box-shadow: 3px 3px 0px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
+
+/* --- THE STATUS (BOTTOM SPAN) --- */
+.quest-status {
+    display: block; /* Forces it to its own line */
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(107, 230, 209, 0.2);
+    transition: all 0.3s ease;
+}
+.quest-status::before {
+    content: "◈ ";
+    opacity: 0.7;
+}
 /* --- THE GLOW EFFECT (When hovering the card) --- */
+.quest-card {
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+/* When you hover the CARD, the TAG glows and the STATUS lights up */
+.quest-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+}
+
 .quest-card:hover .quest-tag {
     transform: translateY(-2px);
-    box-shadow: 0 0 15px currentColor; /* Uses the tag's color for the glow */
+    box-shadow: 0 0 15px currentColor; /* Glow matches the tag color */
 }
+
+.quest-card:hover .quest-status {
+    color: var(--text);
+    text-shadow: 0 0 15px var(--primary);
+}
+
 /* Wes Anderson - The Darjeeling Limited Palette */
 
 /* Saffron / Mustard */
