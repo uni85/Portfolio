@@ -504,53 +504,90 @@ body::after {
 
 /* Specific Quest Tags */
 .quest-tag {
-  display: inline-block;
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 6px;
-  margin-bottom: 12px;
-  font-weight: 700;
-  box-shadow: 4px 4px 0px rgba(0,0,0,0.1); /* Hard retro shadow */
-border-radius: 4px !important; /* Wes loves sharp/slight corners over round ones */
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    border-radius: 4px !important;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
 }
-
+/* --- THE GLOW EFFECT (When hovering the card) --- */
+.quest-card:hover .quest-tag {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px currentColor; /* Uses the tag's color for the glow */
+}
 /* Wes Anderson - The Darjeeling Limited Palette */
 
+/* Saffron / Mustard */
 .gen-ai { 
-    background: #E8A838; /* Saffron/Mustard Yellow (The Suitcases) */
+    background: #E8A838; 
     color: #323C3A; 
     border: 1px solid #C48A28;
-    font-family: "Instrument Serif", serif; /* Analog feel */
+    font-family: "Instrument Serif", serif;
 }
 
+/* Deep Sea Teal */
 .security { 
-    background: #3B7A87; /* Deep Sea Teal (The Train Walls) */
+    background: #3B7A87; 
     color: #F5F5F5; 
     border: 1px solid #2D5F69;
     font-family: "Instrument Serif", serif;
 }
 
+/* Terracotta Red */
 .cloud { 
-    background: #9D3D28; /* Terracotta Red (Vintage travel vibes) */
+    background: #9D3D28; 
     color: #F5F5F5; 
     border: 1px solid #7A2F1F;
     font-family: "Instrument Serif", serif;
 }
 
+/* Dusty Rose */
 .microsoft { 
-    background: #D4AF9A; /* Dusty Rose/Nude (Desert backdrop) */
+    background: #D4AF9A; 
     color: #323C3A; 
     border: 1px solid #B08E7A;
     font-family: "Instrument Serif", serif;
 }
 
+/* Deep Train Blue */
 .gameday { 
-    background: #2B4562; /* Deep Train Blue */
+    background: #2B4562; 
     color: #F5F5F5; 
-    border: 1px solid #E8A838; /* Saffron border for that luxury feel */
+    border: 1px solid #E8A838;
     font-family: "Instrument Serif", serif;
+}
+
+/* --- THE PRESTIGE STATUS STYLE --- */
+.quest-status {
+    display: block;
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    text-shadow: 0 0 15px rgba(107, 230, 209, 0.3);
+    transition: color 0.3s ease;
+}
+
+.quest-status::before {
+    content: "◈ ";
+    font-style: normal;
+    margin-right: 5px;
+    opacity: 0.7;
+}
+
+/* Change status color on hover for extra "grit" */
+.quest-card:hover .quest-status {
+    color: var(--text);
 }
 
 @keyframes zoomIn {
