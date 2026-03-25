@@ -315,6 +315,47 @@ body::after {
   background:var(--secondary);
 }
 
+/* Container for the Title and the Badges */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+/* The Mini-Badges (Technical Highlights) */
+.mini-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  background: rgba(107, 230, 209, 0.05);
+  border-radius: 4px;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+/* The Date Span (Force to bottom) */
+.card .date {
+  display: block; /* Important: makes it move to its own line */
+  margin-top: 15px;
+  font-size: 12px;
+  color: var(--subtext);
+  font-weight: 400;
+}
+
+/* Hover effect for the education cards */
+.card:hover .mini-badge {
+  background: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0 10px var(--primary);
+  transition: 0.3s ease;
+}
+
 /* -------------------------
    EMOJI ROW
 ------------------------- */
