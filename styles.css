@@ -514,6 +514,24 @@ body::after {
   font-size: 11px;
 }
 
+/* Add a tiny outline to the dot so dark colors show up */
+.swatches span::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor; /* Uses the color from the style attribute */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* This makes dark dots visible! */
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* Special glow for the active primary color */
+.swatches span[style*="#6BE6D1"], 
+.swatches span[style*="#007A6B"] {
+  background: rgba(107, 230, 209, 0.1);
+  border-color: var(--primary);
+}
 /* --- THE PULSE DOT --- */
 .status-dot {
   display: inline-block;
