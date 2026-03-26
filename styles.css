@@ -4,18 +4,18 @@
    COLOR SYSTEM (Default Dark)
 ------------------------- */
 :root {
-  --primary: #0AF217;
-  --secondary: #D96B0D;
-  --text: #F5F5F5; /* Keeping white for readability on dark blue */
-  --subtext: #7CD7E9;
-  --bg: #3c0dd9;
-  --surface: #463484;
-  --glass-bg: rgba(70, 52, 132, 0.3);
-  --border: rgba(124, 215, 233, 0.2);
+  --primary: #6EDB74;
+  --secondary: #DBA16E;
+  --text: #F5F5F5; 
+  --subtext: #DBA16E; /* Using the warm sand for a premium look */
+  --bg: #15005C;
+  --surface: #563BB1;
+  --glass-bg: rgba(86, 59, 177, 0.25); 
+  --border: rgba(110, 219, 116, 0.15);
   --accent-orange: #E67245;
   --accent-brown: #A6705B;
-  --page-bg-start: #3c0dd9;
-  --page-bg-end: #463484;
+  --page-bg-start: #15005C;
+  --page-bg-end: #005C05;
 }
 
 /* -------------------------
@@ -191,8 +191,8 @@ body::after {
   text-align:center;
   padding:120px 20px 140px;
   background:
-    radial-gradient(60% 60% at 50% 20%, rgba(255,255,255,.1), transparent 60%),
-    linear-gradient(135deg, #0AF217 0%, #3C0DD9 100%); /* New Gradient */
+    radial-gradient(circle at 20% 30%, rgba(110, 219, 116, 0.15), transparent),
+    linear-gradient(135deg, #15005C 0%, #005C05 100%);
   background-size:300% 300%;
   animation:gradientMove 18s ease infinite;
   border-bottom-left-radius:40px;
@@ -588,7 +588,8 @@ body::after {
 
 .quest-card:hover .quest-tag {
     transform: translateY(-2px);
-    box-shadow: 0 0 15px currentColor; /* Glow matches the tag color */
+    filter: brightness(1.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .quest-card:hover .quest-status {
@@ -600,25 +601,25 @@ body::after {
 
 /* Saffron / Mustard */
 .gen-ai { 
-    background: #325934; 
-    color: #0AF217; 
-    border: 1px solid #0AF217;
-    font-family: "Instrument Serif", serif;
+    background: #005C05; 
+    color: #6EDB74; 
+    border: 1px solid #6EDB74;
+    box-shadow: 0 0 10px rgba(110, 219, 116, 0.1);
 }
 
 /* Deep Sea Teal */
 .security { 
-    background: #D96B0D; 
-    color: #F5F5F5; 
-    border: 1px solid #3C0DD9;
+    background: #5C2B00; 
+    color: #DBA16E; 
+    border: 1px solid #DBA16E;
     font-family: "Instrument Serif", serif;
 }
 
 /* Terracotta Red */
 .cloud { 
-    background: #7CD7E9; 
-    color: #3C0DD9; 
-    border: 1px solid #463484;
+    background: #563BB1; 
+    color: #F5F5F5; /* White text for better legibility on purple */
+    border: 1px solid #15005C;
     font-family: "Instrument Serif", serif;
 }
 
