@@ -4,18 +4,18 @@
    COLOR SYSTEM (Default Dark)
 ------------------------- */
 :root {
-  --primary: #6BE6D1;
-  --secondary: #5C9188;
-  --text: #F5F5F5;
-  --subtext: #A08980;
-  --bg: #323C3A;
-  --surface: #121217;
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.10);
+  --primary: #0AF217;
+  --secondary: #D96B0D;
+  --text: #F5F5F5; /* Keeping white for readability on dark blue */
+  --subtext: #7CD7E9;
+  --bg: #3c0dd9;
+  --surface: #463484;
+  --glass-bg: rgba(70, 52, 132, 0.3);
+  --border: rgba(124, 215, 233, 0.2);
   --accent-orange: #E67245;
   --accent-brown: #A6705B;
-  --page-bg-start: #0f0f10;
-  --page-bg-end: #1a1b26;
+  --page-bg-start: #3c0dd9;
+  --page-bg-end: #463484;
 }
 
 /* -------------------------
@@ -192,7 +192,7 @@ body::after {
   padding:120px 20px 140px;
   background:
     radial-gradient(60% 60% at 50% 20%, rgba(255,255,255,.1), transparent 60%),
-    linear-gradient(135deg, #6BE6D1 0%, #E67245 100%);
+    linear-gradient(135deg, #0AF217 0%, #3C0DD9 100%); /* New Gradient */
   background-size:300% 300%;
   animation:gradientMove 18s ease infinite;
   border-bottom-left-radius:40px;
@@ -600,25 +600,25 @@ body::after {
 
 /* Saffron / Mustard */
 .gen-ai { 
-    background: #E8A838; 
-    color: #323C3A; 
-    border: 1px solid #C48A28;
+    background: #325934; 
+    color: #0AF217; 
+    border: 1px solid #0AF217;
     font-family: "Instrument Serif", serif;
 }
 
 /* Deep Sea Teal */
 .security { 
-    background: #3B7A87; 
+    background: #D96B0D; 
     color: #F5F5F5; 
-    border: 1px solid #2D5F69;
+    border: 1px solid #3C0DD9;
     font-family: "Instrument Serif", serif;
 }
 
 /* Terracotta Red */
 .cloud { 
-    background: #9D3D28; 
-    color: #F5F5F5; 
-    border: 1px solid #7A2F1F;
+    background: #7CD7E9; 
+    color: #3C0DD9; 
+    border: 1px solid #463484;
     font-family: "Instrument Serif", serif;
 }
 
