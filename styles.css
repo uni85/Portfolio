@@ -484,7 +484,6 @@ body:has(#theme-toggle:checked) .dark-spec {
   .dual-spec-grid { flex-direction: column; gap: 15px; }
   .spec-divider { display: none; }
 }
-
 /* -------------------------
    BADGE GALLERY & PURE CSS MODAL
 ------------------------- */
