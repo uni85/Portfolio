@@ -472,17 +472,48 @@ body::after {
   margin: 0 auto;
 }
 
-/* Light mode logic: Highlight the 'Day' spec when theme is toggled */
-body:has(#theme-toggle:checked) .light-spec {
-  filter: drop-shadow(0 0 10px var(--primary));
-}
-body:has(#theme-toggle:checked) .dark-spec {
-  opacity: 0.4;
+/* --- HIDING LOGIC --- */
+.day-text, .light-only { display: none; } /* Default: Hide Light Mode */
+
+/* --- WHEN TOGGLED (LIGHT MODE) --- */
+body:has(#theme-toggle:checked) .night-text { display: none; }
+body:has(#theme-toggle:checked) .dark-only { display: none; }
+
+body:has(#theme-toggle:checked) .day-text { display: inline-block; }
+body:has(#theme-toggle:checked) .light-only { display: flex; }
+
+/* --- STYLING THE INDICATOR --- */
+.theme-indicator {
+  margin: 20px 0 10px;
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--primary);
 }
 
-@media (max-width: 600px) {
-  .dual-spec-grid { flex-direction: column; gap: 15px; }
-  .spec-divider { display: none; }
+.swatches {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-family: monospace;
+  font-size: 11px;
+}
+
+/* --- THE PULSE (Same as before but cleaner) --- */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  margin-right: 8px;
+  box-shadow: 0 0 10px var(--primary);
+  animation: pulse-signal 2s infinite;
+}
+
+@keyframes pulse-signal {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.2); }
 }
 /* -------------------------
    BADGE GALLERY & PURE CSS MODAL
