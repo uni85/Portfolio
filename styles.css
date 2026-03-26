@@ -398,9 +398,91 @@ body::after {
 ------------------------- */
 .site-footer {
   text-align:center;
-  padding:25px;
+  padding: 80px 0 40px;
   color:var(--subtext);
   opacity:.7;
+  border-top: 1px solid var(--border);
+  margin-top: 100px;
+  background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+}
+
+.color-spec-wrapper {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.color-spec-wrapper:hover {
+  opacity: 1;
+}
+
+.dual-spec-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  font-family: monospace;
+  font-size: 11px;
+}
+.spec-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spec-label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--primary);
+  opacity: 0.6;
+}
+
+.swatches {
+  display: flex;
+  gap: 12px;
+}
+
+.spec-divider {
+  font-family: "Instrument Serif", serif;
+  font-size: 24px;
+  opacity: 0.2;
+}
+
+.harmony-subtext {
+  font-size: 10px;
+  margin-top: 15px;
+  font-style: italic;
+  color: var(--subtext);
+  letter-spacing: 0.5px;
+}
+
+.footer-hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  width: 40px;
+  margin: 30px auto;
+}
+
+.copyright {
+  font-size: 12px;
+  color: var(--subtext);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Light mode logic: Highlight the 'Day' spec when theme is toggled */
+body:has(#theme-toggle:checked) .light-spec {
+  filter: drop-shadow(0 0 10px var(--primary));
+}
+body:has(#theme-toggle:checked) .dark-spec {
+  opacity: 0.4;
+}
+
+@media (max-width: 600px) {
+  .dual-spec-grid { flex-direction: column; gap: 15px; }
+  .spec-divider { display: none; }
 }
 
 /* -------------------------
