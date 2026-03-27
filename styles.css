@@ -534,7 +534,9 @@ body::after {
 }
 /* --- THE PULSE DOT --- */
 .status-dot {
-    position: relative;
+  display: inline-block; /* This keeps it on the same line as text/other buttons */
+  vertical-align: middle; /* Aligns it nicely with surrounding text */
+  position: relative;
   width: 20px;
   height: 20px;
   background-color: #3498db;
