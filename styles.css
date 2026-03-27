@@ -451,12 +451,9 @@ body::after {
 }
 
 .spec-divider {
-  align-self: center;
-  font-family: serif;
-  font-size: 20px;
-  opacity: 0.3;
-  margin: 0 10px; /* Minimal side margin */
-  padding-top: 30px; /* Align it with the chips, not the label */
+  padding-top: 45px; /* Aligns with the center of the chips */
+  font-size: 18px;
+  opacity: 0.2;
 }
 
 .harmony-subtext {
@@ -496,8 +493,11 @@ body::after {
 
 .dual-spec-grid {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 20px; /* Tighten space between Dark and Light columns */
+  max-width: 600px; /* Prevents the columns from spreading too far */
+  margin: 0 auto;
 }
 
 .spec-col {
@@ -579,8 +579,11 @@ body::after {
 .swatch-item:hover {
   transform: translateY(-3px);
 }
+
 .light-spec .chip {
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8); /* White border to make them pop */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  filter: saturate(1.4) brightness(1.1); /* This makes the light colors "Vibrant" */
 }
 
 .swatch-item span {
@@ -636,9 +639,9 @@ body::after {
 }
 
 .light-spec .swatch-item span {
-  color: #1A1A1A; 
-  text-shadow: none;
-  opacity: 0.7;
+  color: #FFFFFF !important; /* Force white text so it's visible on the footer gradient */
+  opacity: 1;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
 }
 
 @keyframes pulse-signal {
