@@ -534,17 +534,14 @@ body::after {
 }
 /* --- THE PULSE DOT --- */
 .status-dot {
-  /* display: inline-block; /* This keeps it on the same line as text/other buttons */ */
-  vertical-align: middle; /* Aligns it nicely with surrounding text */
-  display: flex;
-  flex-direction: row; /* Forces horizontal alignment */
-  align-items: center;
-  gap: 15px;
+  display: inline-block;
+  vertical-align: middle;
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 8px;   /* Small enough for a label icon */
+  height: 8px;
   background-color: #3498db;
   border-radius: 50%;
+  margin-right: 8px; /* Space between dot and text */
 }
 
 .status-dot::after {
@@ -557,7 +554,8 @@ body::after {
   background-color: inherit;
   border-radius: 50%;
   z-index: -1;
-  animation: sonar-ripple 2s ease-out infinite;
+  /* Make sure the animation name matches your keyframes! */
+  animation: pulse-signal 2s ease-out infinite; 
 }
 
 @keyframes pulse-signal {
@@ -566,7 +564,7 @@ body::after {
     opacity: 0.8;
   }
   100% {
-    transform: scale(3.5); /* Big expansion */
+    transform: scale(4); /* Big expansion */
     opacity: 0;           /* Clean fade out */
   }
 }
