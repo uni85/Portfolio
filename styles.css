@@ -451,9 +451,12 @@ body::after {
 }
 
 .spec-divider {
-  font-family: "Instrument Serif", serif;
-  font-size: 24px;
-  opacity: 0.2;
+  align-self: center;
+  font-family: serif;
+  font-size: 20px;
+  opacity: 0.3;
+  margin: 0 10px; /* Minimal side margin */
+  padding-top: 30px; /* Align it with the chips, not the label */
 }
 
 .harmony-subtext {
