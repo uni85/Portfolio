@@ -575,6 +575,14 @@ body::after {
   font-size: 9px;
   opacity: 0.6;
   letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* The "Pop" engine */
+  opacity: 0.6; /* Start slightly faded */
+}
+.swatch-item:hover span {
+  opacity: 1;
+  transform: translateY(-2px); /* Subtle lift */
+  color: #FFFFFF !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Glowing effect */
 }
 
 /* The actual color block */
