@@ -41,6 +41,18 @@ body:has(#theme-toggle:checked) .logo {
   -webkit-text-fill-color: transparent;
 }
 
+body:has(#theme-toggle:checked) .swatch-item span {
+  color: #1a1a1a !important; /* Matches your --text variable */
+  text-shadow: none;           /* Removes the "glow" from dark mode */
+  opacity: 0.9;               /* Makes it crisp */
+}
+
+/* Ensure the Pulse Dot is visible in Light Mode */
+body:has(#theme-toggle:checked) .status-dot {
+  color: var(--primary); /* Uses the deep teal #007A6B */
+  box-shadow: 0 0 10px rgba(0, 122, 107, 0.3);
+}
+
 /* -------------------------
    RESET
 ------------------------- */
@@ -337,6 +349,7 @@ body::after {
   border-radius: 4px;
   white-space: nowrap;
   letter-spacing: 0.5px;
+  margin-bottom: 30px;
 }
 
 /* The Date Span (Force to bottom) */
@@ -406,19 +419,6 @@ body::after {
   background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
 }
 
-.color-spec-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0.8;
-  gap: 20px;
-  transition: opacity 0.3s ease;
-}
-
-.color-spec-wrapper:hover {
-  opacity: 1;
-}
-
 .dual-spec-grid {
   margin-bottom: 5px; 
 }
@@ -428,16 +428,6 @@ body::after {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-}
-
-.spec-label {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 9px;
-  gap: 10px;
-  font-weight: 800;
-  color: var(--primary);
-  opacity: 0.6;
 }
 
 .spec-divider {
@@ -474,6 +464,9 @@ body::after {
 }
 
 .color-spec-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
@@ -570,14 +563,6 @@ body::after {
   filter: saturate(1.4) brightness(1.1); /* This makes the light colors "Vibrant" */
 }
 
-.swatch-item span {
-  font-family: monospace;
-  font-size: 9px;
-  opacity: 0.6;
-  letter-spacing: 0.5px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* The "Pop" engine */
-  opacity: 0.6; /* Start slightly faded */
-}
 .swatch-item:hover span {
   opacity: 1;
   transform: translateY(-2px); /* Subtle lift */
@@ -637,7 +622,7 @@ body::after {
     opacity: 0.8;
   }
   100% {
-    transform: scale(4); /* Big expansion */
+    transform: scale(1.8); /* Big expansion */
     opacity: 0;           /* Clean fade out */
   }
 }
@@ -703,10 +688,6 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
   animation: pulse-signal 2s infinite;
 }
 
-@keyframes pulse-signal {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(1.2); }
-}
 /* -------------------------
    BADGE GALLERY & PURE CSS MODAL
 ------------------------- */
