@@ -534,8 +534,12 @@ body::after {
 }
 /* --- THE PULSE DOT --- */
 .status-dot {
-  display: inline-block; /* This keeps it on the same line as text/other buttons */
+  /* display: inline-block; /* This keeps it on the same line as text/other buttons */ */
   vertical-align: middle; /* Aligns it nicely with surrounding text */
+  display: flex;
+  flex-direction: row; /* Forces horizontal alignment */
+  align-items: center;
+  gap: 15px;
   position: relative;
   width: 20px;
   height: 20px;
