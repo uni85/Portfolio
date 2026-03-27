@@ -515,16 +515,16 @@ body::after {
 }
 
 /* Add a tiny outline to the dot so dark colors show up */
-.swatches span::before {
+/* .swatches span::before {
   content: "";
   display: inline-block;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: currentColor; /* Uses the color from the style attribute */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* This makes dark dots visible! */
+  background: currentColor;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
+} */
 
 /* Special glow for the active primary color */
 .swatches span[style*="#6BE6D1"], 
@@ -556,6 +556,37 @@ body::after {
   z-index: -1;
   /* Make sure the animation name matches your keyframes! */
   animation: pulse-signal 2s ease-out infinite; 
+}
+
+.swatch-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease;
+}
+
+.swatch-item:hover {
+  transform: translateY(-3px);
+}
+.light-spec .chip {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.swatch-item span {
+  font-family: monospace;
+  font-size: 9px;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+}
+
+/* The actual color block */
+.chip {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px; /* Slightly rounded for a modern feel */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 @keyframes pulse-signal {
