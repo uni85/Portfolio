@@ -565,8 +565,6 @@ body::after {
 
 .swatch-item:hover span {
   opacity: 1;
-  transform: translateY(-2px); /* Subtle lift */
-  color: #FFFFFF !important;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Glowing effect */
 }
 
@@ -605,8 +603,9 @@ body::after {
 .swatch-item span {
   font-family: monospace;
   font-size: 10px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: #FFFFFF;
+  transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out;
   opacity: 0.8;
 }
 
