@@ -4,30 +4,33 @@
    COLOR SYSTEM (Default Dark)
 ------------------------- */
 :root {
-  --primary: #6BE6D1;
-  --secondary: #5C9188;
+  --primary: #68ABA1;        /* #6BE6D1; */
+  --secondary: #248BF0;      /* #5C9188; */
+  --accent-cyan: #24CCF0;    /* #E67245; */
+  --accent-green: #24F08C;   /* #A6705B; */
+  --deep-blue: #244BF0;      /* #323C3A; */
+  
   --text: #F5F5F5;
   --subtext: #A08980;
-  --bg: #323C3A;
-  --surface: #121217;
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.10);
-  --accent-orange: #E67245;
-  --accent-brown: #A6705B;
-  --page-bg-start: #0f0f10;
-  --page-bg-end: #1a1b26;
+  --bg: #121217;            /* #323C3A; */
+  --surface: #1c1c24;       /* #121217; */
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --border: rgba(104, 171, 161, 0.2); 
+  
+  --page-bg-start: #0a0b10;  /* #0f0f10; */
+  --page-bg-end: #1a1b26;    /* #1a1b26; */
 }
 
 /* -------------------------
    CSS-ONLY LIGHT MODE (via :has and checkbox)
 ------------------------- */
 body:has(#theme-toggle:checked) {
-  --primary: #007A6B;
-  --secondary: #005F52;
+  --primary: #5C9188;        /* #007A6B; */
+  --secondary: #244BF0;      /* #005F52; */
   --text: #1a1a1a;
   --subtext: #4a4a4a;
-  --bg: #f5f5f5;
-  --surface: #e0e0e0;
+  --bg: #fdfdfd;             /* #f5f5f5; */
+  --surface: #f0f2f5;        /* #e0e0e0; */
   --glass-bg: rgba(0, 0, 0, 0.05);
   --border: rgba(0, 0, 0, 0.15);
   --page-bg-start: #e6e9f0;
@@ -77,9 +80,9 @@ body::before, body::after {
   filter:blur(65px) saturate(110%);
   opacity:.35;
   background:
-    radial-gradient(45% 40% at 30% 30%, #6BE6D1, transparent 60%),
-    radial-gradient(40% 35% at 70% 60%, #E67245, transparent 60%),
-    radial-gradient(50% 45% at 50% 80%, #5C9188, transparent 60%);
+    radial-gradient(45% 40% at 30% 30%, var(--primary), transparent 60%),
+    radial-gradient(40% 35% at 70% 60%, var(--secondary), transparent 60%),
+    radial-gradient(50% 45% at 50% 80%, var(--accent-green), transparent 60%);
   animation: drift 36s ease-in-out infinite alternate;
 }
 body::after {
@@ -202,9 +205,9 @@ body::after {
   position:relative;
   text-align:center;
   padding:120px 20px 140px;
-  background:
+  background: 
     radial-gradient(60% 60% at 50% 20%, rgba(255,255,255,.1), transparent 60%),
-    linear-gradient(135deg, #6BE6D1 0%, #E67245 100%);
+    linear-gradient(135deg, var(--primary) 0%, var(--deep-blue) 100%);
   background-size:300% 300%;
   animation:gradientMove 18s ease infinite;
   border-bottom-left-radius:40px;
@@ -528,7 +531,7 @@ body::after {
   position: relative;
   width: 8px;   /* Small enough for a label icon */
   height: 8px;
-  background-color: #3498db;
+  background-color: var(--accent-green);
   border-radius: 50%;
   margin-right: 8px; /* Space between dot and text */
 }
