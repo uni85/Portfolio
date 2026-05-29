@@ -885,11 +885,11 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
 
 /* Wes Anderson - The Darjeeling Limited Palette */
 
-/* Darjeeling tea brown */
-.quest-tag.cloud {
-  background: #6B4F2A;
-  color: #F5E9D3;
-  border: 1px solid #5A4023;
+/* Darjeeling Tea Leaf */
+.quest-tag.darjeeling {
+  background: #9FBF6C;
+  color: #2E3A28;
+  border: 1px solid #7F9A55;
   font-family: "Instrument Serif", serif;
 }
 
