@@ -887,8 +887,8 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
 
 /* Darjeeling Tea Leaf */
 .quest-tag.darjeeling {
-  background: #9FBF6C;
-  color: #2E3A28;
+  background: #a6ea66;
+  color: #323C3A;
   border: 1px solid #7F9A55;
   font-family: "Instrument Serif", serif;
 }
