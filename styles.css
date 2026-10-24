@@ -272,6 +272,14 @@ body::after {
   color:var(--subtext);
 }
 
+.quest-card h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.quest-card h4 a:hover {
+  text-decoration: underline;
+}
 /* -------------------------
    PROFILE CARDS
 ------------------------- */
