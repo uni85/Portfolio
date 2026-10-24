@@ -12,8 +12,8 @@
   
   --text: #F5F5F5;
   --subtext: #A08980;
-  --bg: #121217;            /* #323C3A; */
-  --surface: #1c1c24;       /* #121217; */
+  --bg: #121217;             /* #323C3A; */
+  --surface: #1c1c24;        /* #121217; */
   --glass-bg: rgba(255, 255, 255, 0.04);
   --border: rgba(104, 171, 161, 0.2); 
   
@@ -47,7 +47,7 @@ body:has(#theme-toggle:checked) .logo {
 body:has(#theme-toggle:checked) .swatch-item span {
   color: #1a1a1a !important; /* Matches your --text variable */
   text-shadow: none;           /* Removes the "glow" from dark mode */
-  opacity: 0.9;               /* Makes it crisp */
+  opacity: 0.9;                /* Makes it crisp */
 }
 
 /* Ensure the Pulse Dot is visible in Light Mode */
@@ -225,7 +225,7 @@ body::after {
   font-weight:800;
   margin-bottom:10px;
   text-shadow:0 8px 30px rgba(0,0,0,0.25);
-  color: #fff; /* Ensuring visibility independent of theme */
+  color: #fff;
 }
 .hero-subtitle {
   font-size:1.2rem;
@@ -272,14 +272,19 @@ body::after {
   color:var(--subtext);
 }
 
-.quest-card h4 a {
+/* Quest Card Link Styling (Inherits color, removes visit/active purple/red shifting) */
+.quest-card h4 a,
+.quest-card h4 a:visited,
+.quest-card h4 a:active {
   color: inherit;
   text-decoration: none;
 }
 
 .quest-card h4 a:hover {
+  color: inherit;
   text-decoration: underline;
 }
+
 /* -------------------------
    PROFILE CARDS
 ------------------------- */
@@ -365,7 +370,7 @@ body::after {
 
 /* The Date Span (Force to bottom) */
 .card .date {
-  display: block; /* Important: makes it move to its own line */
+  display: block;
   margin-top: 15px;
   font-size: 12px;
   color: var(--subtext);
@@ -393,7 +398,6 @@ body::after {
 /* -------------------------
    SCROLL REVEAL (CSS-Only)
 ------------------------- */
-/* Default static fallback if feature isn't supported */
 .reveal {
   opacity: 1;
   transform: none;
@@ -442,7 +446,7 @@ body::after {
 }
 
 .spec-divider {
-  padding-top: 45px; /* Aligns with the center of the chips */
+  padding-top: 45px;
   font-size: 18px;
   opacity: 0.2;
 }
@@ -450,7 +454,7 @@ body::after {
 .harmony-subtext {
   margin-top: 0; 
   padding-top: 5px;
-  border-top: 1px solid rgba(255,255,255,0.05); /* Thin line to separate */
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .footer-hr {
@@ -466,13 +470,6 @@ body::after {
   max-width: 500px;
   margin: 0 auto;
 }
-.site-footer {
-  text-align: center;
-  padding: 80px 0 40px;
-  border-top: 1px solid var(--border);
-  margin-top: 100px;
-  background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
-}
 
 .color-spec-wrapper {
   display: flex;
@@ -487,16 +484,9 @@ body::after {
   display: flex;
   justify-content: center; 
   align-items: flex-start;
-  gap: 20px; /* Tighten space between Dark and Light columns */
-  max-width: 600px; /* Prevents the columns from spreading too far */
+  gap: 20px;
+  max-width: 600px;
   margin: 0 auto;
-}
-
-.spec-col {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
 }
 
 .spec-label {
@@ -510,38 +500,20 @@ body::after {
 
 .swatches {
   display: flex;
-  gap: 20px; /* Wider gap for a "Gallery" feel */
+  gap: 20px;
   justify-content: center;
 }
 
-/* Add a tiny outline to the dot so dark colors show up */
-/* .swatches span::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: currentColor;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
-} */
-
-/* Special glow for the active primary color */
-.swatches span[style*="#6BE6D1"], 
-.swatches span[style*="#007A6B"] {
-  background: rgba(107, 230, 209, 0.1);
-  border-color: var(--primary);
-}
 /* --- THE PULSE DOT --- */
 .status-dot {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  width: 8px;   /* Small enough for a label icon */
+  width: 8px;
   height: 8px;
   background-color: var(--accent-green);
   border-radius: 50%;
-  margin-right: 8px; /* Space between dot and text */
+  margin-right: 8px;
 }
 
 .status-dot::after {
@@ -554,61 +526,17 @@ body::after {
   background-color: inherit;
   border-radius: 50%;
   z-index: -1;
-  /* Make sure the animation name matches your keyframes! */
   animation: pulse-signal 2s ease-out infinite; 
 }
 
 .swatch-item {
   display: flex;
-  align-items: center; /* Put dot and text on the same line */
+  align-items: center;
   gap: 8px;
 }
 
 .swatch-item:hover {
   transform: translateY(-3px);
-}
-
-.light-spec .chip {
-  border: 1px solid rgba(255, 255, 255, 0.8); /* White border to make them pop */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  filter: saturate(1.4) brightness(1.1); /* This makes the light colors "Vibrant" */
-}
-
-.swatch-item:hover span {
-  opacity: 1;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Glowing effect */
-}
-
-/* The actual color block */
-.chip {
-  width: 10px; /* Small like a bullet */
-  height: 10px;
-  border-radius: 50%; /* Perfect circle */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.dark-spec .chip {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  /* This creates the "bright" neon effect */
-  box-shadow: 0 0 12px rgba(0, 255, 213, 0.15); 
-}
-
-.dark-spec .chip:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
-  filter: brightness(1.2);
-}
-
-/* Make Day Mode Colors more "Solid" and Defined */
-.light-spec .chip {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.light-spec .chip:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  filter: contrast(1.1);
 }
 
 .swatch-item span {
@@ -621,9 +549,38 @@ body::after {
 }
 
 .light-spec .swatch-item span {
-  color: #FFFFFF !important; /* Force white text so it's visible on the footer gradient */
+  color: #FFFFFF !important;
   opacity: 1;
   text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+
+.chip {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-spec .chip {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 12px rgba(0, 255, 213, 0.15); 
+}
+
+.dark-spec .chip:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
+  filter: brightness(1.2);
+}
+
+.light-spec .chip {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.light-spec .chip:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  filter: contrast(1.1);
 }
 
 @keyframes pulse-signal {
@@ -632,16 +589,14 @@ body::after {
     opacity: 0.8;
   }
   100% {
-    transform: scale(1.8); /* Big expansion */
-    opacity: 0;           /* Clean fade out */
+    transform: scale(1.8);
+    opacity: 0;
   }
 }
-/* --- TOGGLE LOGIC: SHOW/HIDE --- */
 
-/* 1. Default (Dark Mode) */
+/* --- TOGGLE LOGIC: SHOW/HIDE --- */
 .light-spec { display: none; } 
 
-/* 2. Light Mode Active (When checkbox is checked) */
 body:has(#theme-toggle:checked) .dark-spec { display: none; }
 body:has(#theme-toggle:checked) .light-spec { display: flex; }
 
@@ -653,55 +608,9 @@ body:has(#theme-toggle:checked) .light-spec { display: flex; }
   letter-spacing: 0.5px;
 }
 
-.footer-hr {
-  border: 0;
-  border-top: 1px solid var(--border);
-  width: 40px;
-  margin: 30px auto;
-}
-
-.copyright {
-  font-size: 12px;
-  color: var(--subtext);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* --- HIDING LOGIC --- */
-.day-text, .light-only { display: none; } /* Default: Hide Light Mode */
-
-/* --- WHEN TOGGLED (LIGHT MODE) --- */
-body:has(#theme-toggle:checked) .night-text { display: none; }
-body:has(#theme-toggle:checked) .dark-only { display: none; }
-
-body:has(#theme-toggle:checked) .day-text { display: inline-block; }
-body:has(#theme-toggle:checked) .light-only { display: flex; }
-
-/* --- STYLING THE INDICATOR --- */
-.theme-indicator {
-  margin: 20px 0 10px;
-  font-family: "Instrument Serif", serif;
-  font-style: italic;
-  font-size: 1.2rem;
-  color: var(--primary);
-}
-
-/* --- THE PULSE (Same as before but cleaner) --- */
-.status-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: currentColor;
-  margin-right: 8px;
-  box-shadow: 0 0 10px var(--primary);
-  animation: pulse-signal 2s infinite;
-}
-
 /* -------------------------
    BADGE GALLERY & PURE CSS MODAL
 ------------------------- */
-
 .badge-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -734,7 +643,6 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
   z-index: 10;
 }
 
-/* CSS Checkbox Hack for Lightbox Modal */
 .lightbox-overlay {
   display: none;
 }
@@ -742,7 +650,6 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
   display: none;
 }
 
-/* When clicking the image, it checks the hidden input */
 .lightbox-toggle:checked ~ img {
   position: fixed;
   top: 50%;
@@ -767,7 +674,6 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
   border-color: transparent;
 }
 
-/* Overlay Background */
 .lightbox-toggle:checked ~ .lightbox-overlay {
   display: block;
   position: fixed;
@@ -778,7 +684,6 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
   cursor: zoom-out;
 }
 
-/* Close Button (top right) */
 .lightbox-toggle:checked ~ .close-btn {
   display: block;
   position: fixed;
@@ -798,7 +703,7 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
 
 /* Quest Card Layout Enhancement */
 .quest-card {
-  display: flex; /* This puts info and badge side-by-side */
+  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -806,16 +711,16 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
   border: 1px dashed var(--border);
   padding: 24px;
   border-radius: 16px;
-  transition: 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .quest-info {
-  flex: 1; /* Takes up remaining space */
+  flex: 1;
 }
 
 .quest-badge {
-  flex-shrink: 0; /* Prevents image from shrinking */
-  width: 100px;  /* Adjust size as needed */
+  flex-shrink: 0;
+  width: 100px;
   height: 100px;
 }
 
@@ -826,7 +731,6 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
-/* Responsive fix for small screens (stack them vertically on mobile) */
 @media (max-width: 600px) {
   .quest-card {
     flex-direction: column-reverse;
@@ -838,62 +742,36 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
   }
 }
 
-/* Specific Quest Tags */
-/* --- THE TAGS (SPANS) --- */
+/* Quest Tags & Status */
 .quest-tag {
-    display: inline-block; /* Essential for padding/margin to work */
-    font-size: 11px;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    padding: 5px 12px;
-    margin-bottom: 12px;
-    font-weight: 700;
-    border-radius: 4px;
-    box-shadow: 3px 3px 0px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
 }
 
-/* --- THE STATUS (BOTTOM SPAN) --- */
-.quest-status {
-    display: block; /* Forces it to its own line */
-    margin-top: 18px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-    font-family: "Instrument Serif", serif;
-    font-style: italic;
-    font-size: 1.05rem;
-    color: var(--primary);
-    letter-spacing: 0.5px;
-    text-shadow: 0 0 10px rgba(107, 230, 209, 0.2);
-    transition: all 0.3s ease;
-}
-.quest-status::before {
-    content: "◈ ";
-    opacity: 0.7;
-}
-/* --- THE GLOW EFFECT (When hovering the card) --- */
-.quest-card {
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-/* When you hover the CARD, the TAG glows and the STATUS lights up */
 .quest-card:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
 }
 
 .quest-card:hover .quest-tag {
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px currentColor; /* Glow matches the tag color */
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px currentColor;
 }
 
 .quest-card:hover .quest-status {
-    color: var(--text);
-    text-shadow: 0 0 15px var(--primary);
+  color: var(--text);
+  text-shadow: 0 0 15px var(--primary);
 }
 
-/* Wes Anderson - The Darjeeling Limited Palette */
-
-/* Darjeeling Tea Leaf */
+/* Wes Anderson Palettes & Tag Themes */
 .quest-tag.darjeeling {
   background: #a6ea66;
   color: #323C3A;
@@ -901,72 +779,61 @@ body:has(#theme-toggle:checked) .light-only { display: flex; }
   font-family: "Instrument Serif", serif;
 }
 
-/* Saffron / Mustard */
 .gen-ai { 
-    background: #E8A838; 
-    color: #323C3A; 
-    border: 1px solid #C48A28;
-    font-family: "Instrument Serif", serif;
+  background: #E8A838; 
+  color: #323C3A; 
+  border: 1px solid #C48A28;
+  font-family: "Instrument Serif", serif;
 }
 
-/* Deep Sea Teal */
 .security { 
-    background: #3B7A87; 
-    color: #F5F5F5; 
-    border: 1px solid #2D5F69;
-    font-family: "Instrument Serif", serif;
+  background: #3B7A87; 
+  color: #F5F5F5; 
+  border: 1px solid #2D5F69;
+  font-family: "Instrument Serif", serif;
 }
 
-/* Terracotta Red */
 .cloud { 
-    background: #9D3D28; 
-    color: #F5F5F5; 
-    border: 1px solid #7A2F1F;
-    font-family: "Instrument Serif", serif;
+  background: #9D3D28; 
+  color: #F5F5F5; 
+  border: 1px solid #7A2F1F;
+  font-family: "Instrument Serif", serif;
 }
 
-/* Dusty Rose */
 .microsoft { 
-    background: #D4AF9A; 
-    color: #323C3A; 
-    border: 1px solid #B08E7A;
-    font-family: "Instrument Serif", serif;
+  background: #D4AF9A; 
+  color: #323C3A; 
+  border: 1px solid #B08E7A;
+  font-family: "Instrument Serif", serif;
 }
 
-/* Deep Train Blue */
 .gameday { 
-    background: #2B4562; 
-    color: #F5F5F5; 
-    border: 1px solid #E8A838;
-    font-family: "Instrument Serif", serif;
+  background: #2B4562; 
+  color: #F5F5F5; 
+  border: 1px solid #E8A838;
+  font-family: "Instrument Serif", serif;
 }
 
-/* --- THE PRESTIGE STATUS STYLE --- */
 .quest-status {
-    display: block;
-    margin-top: 18px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-    font-family: "Instrument Serif", serif;
-    font-style: italic;
-    font-size: 1.05rem;
-    color: var(--primary);
-    letter-spacing: 0.5px;
-    line-height: 1.4;
-    text-shadow: 0 0 15px rgba(107, 230, 209, 0.3);
-    transition: color 0.3s ease;
+  display: block;
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  text-shadow: 0 0 15px rgba(107, 230, 209, 0.3);
+  transition: color 0.3s ease;
 }
 
 .quest-status::before {
-    content: "◈ ";
-    font-style: normal;
-    margin-right: 5px;
-    opacity: 0.7;
-}
-
-/* Change status color on hover for extra "grit" */
-.quest-card:hover .quest-status {
-    color: var(--text);
+  content: "◈ ";
+  font-style: normal;
+  margin-right: 5px;
+  opacity: 0.7;
 }
 
 @keyframes zoomIn {
